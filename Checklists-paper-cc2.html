@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="stylechecklists-paper-1.css">-->
+<style>
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+    img{
+       width: 100%;
+       height: 25vh;
+       object-fit: cover;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Seven columns side by side */
+    .column {
+      float: left;
+      width: 12.5%;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 1px solid #ccc;
+          background-color: #e5e5e5;
+          width: 30%;
+          height: auto;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: inherit;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: #a69cac;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border-top: 1px solid #ccc;
+          width: 70%;
+          border-left: none;
+          height: 100%;
+          display: none;
+        }
+
+        /* Clear floats after the tab */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+</style>
+<body>
+
+<h2 style="text-align:center">Checklists paper 2</h2>
+
+    <div class="mySlides">
+        <div class="numbertext">1 / 8</div>
+        <img src="images/atomicstructure.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC3 Atomic Structure</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC3a Structure of an atom')">CC3a Structure of an atom</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC3b Atomic number and mass number')">CC3b Atomic number and mass number</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC3c Isotopes')">CC3c Isotopes</button>
+        </div>
+        <div id="CC3a Structure of an atom" class="tabcontent">
+            <p>Describe how Dalton's ideas about atoms have changed.</p>
+            <p>Describe how the subatomic particles are arranged in an atom.</p>
+            <p>Explain how atoms of different elements are different.</p>
+            <p>Recall the charges and relative masses of the three subatomic particles.</p>
+            <P>Explain why all atoms have no overall charge.</p>
+            <P>Describe how the size of an atom compares to the size of its nucleus.</p>
+        </div>
+
+        <div id="CC3b Atomic number and mass number" class="tabcontent">
+            <p>State where most of the mass of an atom is found.</p>
+            <p>State the meaning of atomic number.</p>
+            <p>State the meaning of mass number.</p>
+            <P>Describe how the atoms of different elements vary.</p>
+            <P>State the number of electrons in an atom from its atomic number.</p>
+            <p>Calculate the numbers of protons, neutrons and electrons using atomic and mass numbers.</p>
+        </div>
+
+        <div id="CC3c Isotopes" class="tabcontent">
+            <p>State what is meant by an isotope.</p>
+            <p>Identify isotopes from information about the structure of atoms.</p>
+            <p>Calculate the numbers of protons, neutrons and electrons using atomic numbers and mass numbers.</p>
+            <p>Explain why the relative atomic mass of many elements is not a whole number.</p>
+            <p>H Calculate the relative atomic mass of an element from the relative masses and abundances of its isotopes.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+<!--CC4 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">2 / 8</div>
+        <img src="images/periodictable.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC4 The Periodic Table</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC4a Elements and the periodic table')">CC4a Elements and the periodic table</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC4b Atomic number and the periodic table')">CC4b Atomic number and the periodic table</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC4c Electronic configurations and the periodic table')">CC4c Electronic configurations and the periodic table</button>
+        </div>
+        <div id="CC4a Elements and the periodic table" class="tabcontent">
+            <p>Recall the chemical symbols of some common elements.</p>
+            <p>Describe how Mendeleev arranged elements into a periodic table.</p>
+            <p>Describe how Mendeleev predicted the existence and properties of some elements yet to be discovered.</p>
+            <p>Explain how Mendeleev s early ideas were supported by later evidence.</p>
+        </div>
+        <div id="CC4b Atomic number and the periodic table" class="tabcontent">
+            <p>Explain some problems Mendeleev had when ordering the elements.</p>
+            <p>Explain the meaning of the term atomic number.</p>
+            <p>Describe how the elements are arranged in the modern periodic table.</p>
+            <p>Recall the positions of metals and non-metals in the periodic table.</p>
+        </div>
+        <div id="CC4c Electronic configurations and the periodic table" class="tabcontent">
+            <p>State what the term ‘electronic configuration’ means.</p>
+            <p>Show electronic configurations in the form 2.8.1 and as diagrams.</p>
+            <p>Predict the electronic configurations of the elements hydrogen to calcium.</p>
+            <p>Explain the links between an element s position in the periodic table and its electronic configuration.</p>
+            <p>Recall the positions of metals and non-metals in the periodic table.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+<!--CC5 CC6 CC7 Checklist-->
+    <div class="mySlides">
+        <div class="numbertext">3 / 8</div>
+        <img src="images/covalentbonding.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC5 Ionic Bonding</h2>
+        <h2>CC6 Covalent Bonding</h2>
+        <h2>CC7 Types of Substance</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC5a Ionic bonds')">CC5a Ionic bonds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC5b Ionic lattices')">CC5b Ionic lattices</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC5c Properties of ionic compounds')">CC5c Properties of ionic compounds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC6a Covalent bonds')">CC6a Covalent bonds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC7a Molecular compounds')">CC7a Molecular compounds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC7b Allotropes of carbon')">CC7b Allotropes of carbon</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC7c Properties of metals')">CC7c Properties of metals</button>
+        </div>
+        <div id="CC5a Ionic bonds" class="tabcontent">
+            <p>Recall the formulae of simple ions.</p>
+            <p>Explain how cations and anions are formed.</p>
+            <p>Use dot and cross diagrams to explain how ionic bonds are formed.</p>
+            <p>Explain the difference between an atom and an ion.</p>
+            <p>Calculate the numbers of protons, neutrons and electrons in simple ions.</p>
+            <p>Explain the formation of ions in groups 1, 2, 6 and 7 of the periodic table.</p>
+        </div>
+
+        <div id="CC5b Ionic lattices" class="tabcontent">
+            <p>Recall the formulae of common polyatomic ions, and the charges on them.</p>
+            <p>Interpret the use of -ide and -ate endings in the names of compounds.</p>
+            <p>Name ionic compounds using -ide and -ate endings.</p>
+            <p>Work out the formula of an ionic compound from the formulae of its ions.</p>
+            <p>Describe the structure of ionic compounds.</p>
+            <p>Explain how ionic compounds are held together.</p>
+        </div>
+
+        <div id="CC5c Properties of ionic compounds" class="tabcontent">
+            <p>Describe the properties of ionic compounds.</p>
+            <p>Explain why ionic compounds have high melting points and high boiling points.</p>
+            <p>Explain why ionic compounds conduct electricity when they are molten and in aqueous solution.</p>
+            <p>Explain why ionic compounds do not conduct electricity as solids.</p>
+            <p>Identify ionic compounds from data about their properties.</p>
+        </div>
+
+        <div id="CC6a Covalent bonds" class="tabcontent">
+            <p>Explain how covalent bonds are formed.</p>
+            <p>Recall the names of some common molecular elements.</p>
+            <p>Recall the names of some common molecular compounds.</p>
+            <p>State the bonding that is found in molecules.</p>
+            <p>State the approximate size (order or magnitude) of atoms and small molecules.</p>
+            <p>Explain the formation of covalent bonds using dot and cross diagrams.</p>
+        </div>
+
+        <div id="CC7a Molecular compounds" class="tabcontent">
+            <p>Recall examples of common covalent, simple molecular compounds.</p>
+            <p>Describe the general properties of covalent, simple molecular compounds.</p>
+            <p>Explain why covalent, simple molecular compounds have low melting and boiling points.</p>
+            <p>Explain why covalent, simple molecular compounds are poor conductors of electricity.</p>
+            <p>Describe the structure of a polymer.</p>
+        </div>
+
+        <div id="CC7b Allotropes of carbon" class="tabcontent">
+            <p>Recall some allotropes of carbon.</p>
+            <p>Describe the basic differences between covalent, simple molecules and giant covalent structures.</p>
+            <P>Describe the structures of diamond, graphite, fullerenes and graphene.</p>
+            <P>Describe the properties of diamond, graphite, fullerenes and graphene.</p>
+            <P>Explain the properties and uses of diamond and graphite in terms of their structure and bonding.</p>
+            <p>Explain the properties of fullerenes and graphene in terms of their structure and bonding.</p>
+        </div>
+
+        <div id="CC7c Properties of metals" class="tabcontent">
+            <p>Describe the particles and how they are arranged in metals.</p>
+            <p>Explain why metals are malleable.</p>
+            <p>Explain why metals conduct electricity.</p>
+            <p>Describe the typical properties of metals.</p>
+            <p>Describe the typical properties of non-metals.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+<!--CC9 Checklist-->
+    <div class="mySlides">
+        <div class="numbertext">4 / 8</div>
+        <img src="images/calculationschemistry.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC9 Calculations Involving Masses</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC9a Masses and empirical formulae')">CC9a Masses and empirical formulae</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC9b Conservation of mass')">CC9b Conservation of mass</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC9c Moles')">CC9c Moles</button>
+        </div>
+        <div id="CC9a Masses and empirical formulae" class="tabcontent">
+            <p>Calculate the relative formula mass of a substance from relative atomic masses.</p>
+            <p>Calculate the empirical formula of a compound from the masses of the elements it contains.</p>
+            <p>Explain the difference between an empirical formula and a molecular formula.</p>
+            <p>Deduce the empirical formula from a molecular formula.</p>
+            <p>Deduce the molecular formula for a compound from its empirical formula and its relative formula mass.</p>
+            <p>Describe an experiment to determine the empirical formula for a compound.</p>
+        </div>
+        <div id="CC9b Conservation of mass" class="tabcontent">
+            <p>Explain the law of conservation of mass in a closed system.</p>
+            <p>Explain the law of conservation of mass in a non-enclosed system.</p>
+            <p>Calculate the mass of product formed from a given mass of reactant, using a balanced equation.</p>
+            <p>Calculate the mass of a reactant needed to produce a given amount of product, using a balanced equation.</p>
+            <p>Calculate the concentration of a solution in g dm-3.</p>
+        </div>
+        <div id="CC9c Moles" class="tabcontent">
+            <p>H Describe what is meant by a mole of particles.</p>
+            <p>H Calculate the number of moles of particles in a given mass of a certain substance and vice versa.</p>
+            <p>H Calculate the number of particles in a given number of moles or mass of a substance and vice versa.</p>
+            <p>H Explain that the mass of a product formed in a reaction is controlled by the mass of reactant that is not in excess.</p>
+            <p>H Deduce the balanced equation for a reaction from the masses of reactants and/or products.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">5 / 8</div>
+        <img src="images/noblegases.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC13 Groups in the Periodic Table</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC13a Group 1')">CC13a Group 1</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC13b Group 7')">CC13b Group 7</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC13c Halogen reactivity')">CC13c Halogen reactivity</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC13d Group 0')">CC13d Group 0</button>
+        </div>
+
+        <div id="CC13a Group 1" class="tabcontent">
+            <p>Explain the classification of alkali metals, halogens and noble gases, into groups in the periodic table.</p>
+            <p>Describe the main physical properties of alkali metals.</p>
+            <p>Describe the reactions of lithium, sodium and potassium with water.</p>
+            <p>Write word, balanced and H ionic equations (including state symbols) for the reactions of alkali metals.</p>
+            <p>Describe the pattern of reactivity of the alkali metals.</p>
+            <p>Explain how the electronic configurations of the atoms of alkali metals affect their reactivity.</p>
+        </div>
+
+        <div id="CC13b Group 7" class="tabcontent">
+            <p>Recall the appearance of chlorine, bromine and iodine at room temperature.</p>
+            <p>Describe the trends in colour, melting point and boiling point of chlorine, bromine and iodine down the group, and use these to predict physical properties of other halogens.</p>
+            <p>Describe the chemical test for chlorine gas.</p>
+            <p>Describe the trends in the reactions of halogens with metals, and use this to predict reactions of other halogens.</p>
+            <p>Write word and balanced chemical equations, including state symbols, for the reactions of halogens with metals.</p>
+            <p>Describe hydrogen halides and their chemical properties.</p>
+        </div>
+
+        <div id="CC13c Halogen reactivity" class="tabcontent">
+            <p>Describe the relative reactivity of halogens.</p>
+            <p>Explain how the reactivity of halogens can be worked out from displacement reactions.</p>
+            <p>Write balanced chemical equations, including state symbols, for the displacement reactions of halogens.</p>
+            <p>H Explain how displacement reactions are examples of redox reactions.</p>
+            <p>H Write ionic equations, including state symbols, for displacement reactions of halogens.</p>
+            <p>Explain the order of reactivity of halogens (using electronic configurations).</p>
+        </div>
+
+        <div id="CC13d Group 0" class="tabcontent">
+            <p>Explain why noble gases are chemically inert by referring to their electronic configuration.</p>
+            <p>Describe uses of noble gases linked with their properties.</p>
+            <p>Describe the trends in the physical properties of the noble gases.</p>
+            <p>Use trends in physical properties to predict the physical properties of other noble gases.</p>
+        </div>
+
+            <div class="clearfix"></div>
+    </div>
+
+    <!--CC14 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">6 / 8</div>
+        <img src="images/ratesofreaction.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC14 Rates of Reaction</h2>
+
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC14a Rates of reaction')">CC14a Rates of reaction</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC14b Factors affecting reaction rates')">CC14b Factors affecting reaction rates</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC14c Catalysts and activation energy')">CC14c Catalysts and activation energy</button>
+        </div>
+        <div id="CC14a Rates of reaction" class="tabcontent">
+            <p>Describe different changes that can occur as a reaction proceeds.</p>
+            <p>Suggest different experimental methods to investigate rates of reaction (e.g. measurements of mass of reactants against time, volume of gas released against time, concentration of reactant or product against time).</p>
+            <p>Use graphs of changes (in mass, volume or concentration of reactant or product) against time, to interpret what is happening during reactions.</p>
+        </div>
+        <div id="CC14b Factors affecting reaction rates" class="tabcontent">
+            <p>Explain what has to happen for reactions to take place.</p>
+            <p>Explain why changes in the energy of particles affect rates of reaction.</p>
+            <p>Explain why changes in the frequency of collisions between particles affect the rate of reaction.</p>
+            <p>Explain why changes in temperature, concentration, surface area and pressure affect the rate of reaction (surface area for solids, pressure for gases only).</p>
+            <p>Describe ways of speeding up or slowing down chemical reactions.</p>
+        </div>
+        <div id="CC14c Catalysts and activation energy" class="tabcontent">
+            <p>Describe what a catalyst does.</p>
+            <p>Explain how catalysts are useful.</p>
+            <p>Explain what the activation energy of a reaction is.</p>
+            <p>Explain how catalysts speed up chemical reactions.</p>
+            <p>Describe what enzymes are.</p>
+            <p>Name one or more examples of enzymes.</p>
+        </div>
+
+            <div class="clearfix"></div>
+    </div>
+    <!--CC15 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">7 / 8</div>
+        <img src="images/exothermicendothermic.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC15 Heat energy changes in chemical reactions</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC15a Exothermic and endothermic reactions')">CC15a Exothermic and endothermic reactions</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC15b Energy changes in reactions')">CC15b Energy changes in reactions</button>
+        </div>
+        <div id="CC15a Exothermic and endothermic reactions" class="tabcontent">
+            <p>Recall some examples of exothermic and endothermic changes.</p>
+            <p>Describe how heat changes in solution may be determined.</p>
+            <p>Describe the differences between exothermic and endothermic changes.</p>
+        </div>
+        <div id="CC15b Energy changes in reactions" class="tabcontent">
+            <p>Describe exothermic and endothermic reactions in terms of energy changes when bonds are broken and formed.</p>
+            <p>H Use bond energies to calculate energy changes in reactions.</p>
+            <p>Explain the meaning of activation energy.</p>
+            <p>Draw and label reaction profiles.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+        <!--CC16 CC17 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">8 / 8</div>
+        <img src="images/earthsatmosphere.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC16 Fuels</h2>
+        <h2>CC17 Earth and Atmospheric Science</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC16a Hydrocarbons in crude oil and natural gas')">CC16a Hydrocarbons in crude oil and natural gas</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC16b Fractional distillation of crude oil')">CC16b Fractional distillation of crude oil</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC16c The alkane homologous series')">CC16c The alkane homologous series</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC16d Complete and incomplete combustion')">CC16d Complete and incomplete combustion</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC16e Combustible fuels and pollution')">CC16e Combustible fuels and pollution</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC16f Breaking down hydrocarbons')">CC16f Breaking down hydrocarbons</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC17a The early atmosphere')">CC17a The early atmosphere</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC17b The changing atmosphere')">CC17b The changing atmosphere</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC17c The atmosphere today')">CC17c The atmosphere today</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC17d Climate change')">CC17d Climate change</button>
+        </div>
+        <div id="CC16a Hydrocarbons in crude oil and natural gas" class="tabcontent">
+            <p>Recall the meaning of the term hydrocarbon.</p>
+            <p>Describe the compounds found in crude oil.</p>
+            <p>Describe the importance of crude oil for the petrochemical industry.</p>
+            <p>Explain why crude oil is a finite resource.</p>
+            <p>Recall the names of some common fossil fuels.</p>
+        </div>
+        <div id="CC16b Fractional distillation of crude oil" class="tabcontent">
+            <p>Describe how crude oil is separated by fractional distillation.</p>
+            <p>Explain how fractional distillation of crude oil works.</p>
+            <p>Recall the names and uses of fractions from crude oil.</p>
+            <p>Describe how fractions differ from each other.</p>
+            <p>Explain why the properties of different fractions differ.</p>
+        </div>
+        <div id="CC16c The alkane homologous series" class="tabcontent">
+            <p>Describe that oil fractions mostly contain alkanes.</p>
+            <p>Describe the main features of an homologous series.</p>
+            <p>Explain why alkanes form an homologous series.</p>
+        </div>
+        <div id="CC16d Complete and incomplete combustion" class="tabcontent">
+            <p>Describe the complete combustion of hydrocarbon fuels.</p>
+            <p>Explain the production of harmful products during the incomplete combustion of hydrocarbon fuels.</p>
+            <p>Explain why carbon monoxide is toxic.</p>
+            <p>Describe the problems caused by incomplete combustion.</p>
+        </div>
+        <div id="CC16e Combustible fuels and pollution" class="tabcontent">
+            <p>Explain how some hydrocarbon fuels produce sulfur dioxide in use.</p>
+            <p>Recall the names of the pollutants responsible for acid rain.</p>
+            <p>Describe some effects of acid rain.</p>
+            <p>Explain why oxides of nitrogen are produced when fuels are burned in engines.</p>
+        </div>
+        <div id="CC16f Breaking down hydrocarbons" class="tabcontent">
+            <p>Evaluate hydrogen as an alternative fuel to petrol for cars.</p>
+            <p>Describe what happens during cracking.</p>
+            <p>Explain why alkanes are saturated and alkenes are unsaturated.</p>
+            <p>Explain why cracking is necessary.</p>
+        </div>
+        <div id="CC17a The early atmosphere" class="tabcontent">
+            <p>Describe how the Earth's early atmosphere was formed.</p>
+            <p>State the names and relative amounts of the gases found in the Earth's early atmosphere.</p>
+            <p>Draw conclusions from evidence about the Earth's early atmosphere.</p>
+            <p>Explain how the oceans are thought to have formed.</p>
+        </div>
+        <div id="CC17b The changing atmosphere" class="tabcontent">
+            <p>Describe how the formation of the oceans influenced the composition of the atmosphere.</p>
+            <p>Explain how photosynthetic organisms (including plants) changed the composition of the atmosphere.</p>
+            <p>State the chemical test for oxygen.</p>
+        </div>
+        <div id="CC17c The atmosphere today" class="tabcontent">
+            <p>Recall the names of significant greenhouse gases.</p>
+            <p>Describe the processes involved in the greenhouse effect.</p>
+            <p>Describe how human activity increases the concentration of greenhouse gases.</p>
+            <p>Evaluate the correlation between atmospheric carbon dioxide concentrations and fossil fuel use.</p>
+            <p>Evaluate the evidence for increased atmospheric greenhouse gas concentrations being part of the cause of global warming and climate change.</p>
+        </div>
+        <div id="CC17d Climate change" class="tabcontent">
+            <p>Suggest possible effects on the climate of increased levels of carbon dioxide and methane.</p>
+            <p>Describe how human activity leads to increased carbon dioxide levels.</p>
+            <p>Describe how human activity leads to increased methane levels.</p>
+            <p>Describe the projected effects of climate change.</p>
+            <p>Describe how the potential harmful effects of climate change can be addressed and limited.</p>
+        </div>
+            <div class="clearfix"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="images/atomicstructure.png" style="width:100%" onclick="currentSlide(1)" alt="Atomic Structure">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/periodictable.png" style="width:100%" onclick="currentSlide(2)" alt="The Periodic Table">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/covalentbonding.png" style="width:100%" onclick="currentSlide(3)" alt="Ionic Bonding; Covalent Bonding; Types of Substance">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/calculationschemistry.png" style="width:100%" onclick="currentSlide(4)" alt="Calculations Involving Masses">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/noblegases.png" style="width:100%" onclick="currentSlide(5)" alt="Groups in the Periodic Table">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/ratesofreaction.png" style="width:100%" onclick="currentSlide(6)" alt="Rates of Reaction">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/exothermicendothermic.png" style="width:100%" onclick="currentSlide(7)" alt="Heat Energy Changes in Chemical Reactions">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/earthsatmosphere.png" style="width:100%" onclick="currentSlide(8)" alt="Fuels; Earth and Atmospheric Science">
+        </div>
+    </div>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="stylechecklists-paper-1.css">-->
+<style>
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+    img{
+       width: 100%;
+       height: 25vh;
+       object-fit: cover;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Seven columns side by side */
+    .column {
+      float: left;
+      width: 20%;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 1px solid #ccc;
+          background-color: #e5e5e5;
+          width: 30%;
+          height: auto;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: inherit;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: #a69cac;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border-top: 1px solid #ccc;
+          width: 70%;
+          border-left: none;
+          height: 100%;
+          display: none;
+        }
+
+        /* Clear floats after the tab */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+</style>
+<body>
+
+<h2 style="text-align:center">Checklists paper 2</h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="images/eWL4wLHPH3vLkvttuz54vh.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP7 Energy - Forces Doing Work</h2>
+        <h2>CP8 Forces and their Effects</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP7a Work and power')">CP7a Work and power</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP8a Objects affecting each other')">CP8a Objects affecting each other</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP8b Vector diagrams')">CP8b Vector diagrams</button>
+        </div>
+        <div id="CP7a Work and power" class="tabcontent">
+            <p>Describe some ways in which the energy of a system can be changed.</p>
+            <p>Measure the work done by a force.</p>
+            <p>Recall and use the equation linking work done, force and distance.</p>
+            <p>Explain what power means.</p>
+            <p>Recall and use the equation linking power, work done and time.</p>
+            <!--            <p><input type="checkbox" name="option1">Explain the difference between a vector and a scalar quantity.</p>-->
+            <!--            <p><input type="checkbox" name="option1">Describe the difference between displacement and distance.</p>-->
+            <!--            <p><input type="checkbox" name="option1">Describe the difference between velocity and speed.</p>-->
+            <!--            <p><input type="checkbox" name="option1">Define the terms: acceleration, force, momentum, energy.</p>-->
+        </div>
+        <div id="CP8a Objects affecting each other" class="tabcontent">
+            <p>Describe the effect of a gravitational field on objects.</p>
+            <p>Describe the effects of magnetic fields on objects.</p>
+            <p>Describe the forces that can occur when objects are in contact with each other.</p>
+            <p>Describe the effects of electrostatic fields on objects.</p>
+            <p>Describe how pairs of forces occur when objects affect each other.</p>
+            <p>Use examples to explain the difference between vector and scalar quantities.</p>
+            <div class="clearfix"></div>
+        </div>
+        <div id="CP8b Vector diagrams" class="tabcontent">
+            <p>Describe how to resolve forces.</p>
+            <p>Use scale drawings to work out the net force on an object.</p>
+            <p>Draw free body diagrams to represent the forces on an object.</p>
+            <p>Explain what happens in situations where several forces are acting on an object.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+<!--CP9 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="images/electricity.webp" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP9 Electricity and Circuits</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP9a Electric circuits')">CP9a Electric circuits</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP9b Current and potential difference')">CP9b Current and potential difference</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP9c Current, charge and energy')">CP9c Current, charge and energy</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP9d Resistance')">CP9d Resistance</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP9e More about resistance')">CP9e More about resistance</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP9f Transferring energy')">CP9f Transferring energy</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP9g Power')">CP9g Power</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP9h Transferring energy by electricity')">CP9h Transferring energy by electricity</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP9i Electrical safety')">CP9i Electrical safety</button>
+        </div>
+        <div id="CP9a Electric circuits" class="tabcontent">
+            <p>Describe the basic structure of an atom (positions, relative masses and relative charges of protons, neutrons and electrons).</p>
+            <p>Recognise the circuit symbols for a range of common electrical components (cells, including batteries, switches, voltmeters, ammeters and lamps).</p>
+            <p>Draw diagrams for circuits containing common electrical components, using conventions for positive and negative terminals.</p>
+            <p>Describe and explain the difference between the brightness of identical lamps in series and parallel circuits.</p>
+            <p>Describe and explain the effects of different numbers of identical lamps, cells and switches in series and parallel circuits.</p>
+        </div>
+        <div id="CP9b Current and potential difference" class="tabcontent">
+            <p>Describe how to measure voltage.</p>
+            <p>Define the term potential difference.</p>
+            <p>Describe how to measure current.</p>
+            <p>Describe the conditions needed to produce an electric current. (A complete circuit and a source of voltage/potential difference.)</p>
+            <p>Describe the behaviour of current at a junction.</p>
+        </div>
+        <div id="CP9c Current, charge and energy" class="tabcontent">
+            <p>Explain the link between the potential difference (voltage) across a battery or a component, the charge passing through it and the amount of energy transferred.</p>
+            <p>Recall that the unit of potential difference is the volt and explain it in terms of units of energy and charge (a potential difference of one joule per coulomb).</p>
+            <p>Recall and use the equation to calculate the energy transferred, the charge that flows or the potential difference. (E = Q multiplied by V)</p>
+            <p>Explain the link between electric current and electric charge.</p>
+            <p>Explain electric current in metals in terms of electrons.</p>
+            <p>Recall and use the equation to calculate the charge that flows, the current or the time the current flows. (Q = I multiplied by t )</p>
+        </div>
+        <div id="CP9d Resistance" class="tabcontent">
+            <p>Explain the link between resistance and current in a circuit.</p>
+            <p>Define the resistance of a component or circuit (R = V/I).</p>
+            <p>Recall and use the equation to calculate the potential difference, the current or the resistance (V = I multiplied by R).</p>
+            <p>Explain the difference in resistance when two resistors are connected in series or in parallel.</p>
+            <p>Calculate the currents, potential differences and resistances in series circuits.</p>
+            <p>Explain the design and construction of series circuits for testing and measuring.</p>
+        </div>
+        <div id="CP9e More about resistance" class="tabcontent">
+            <p>Explain how current changes with potential difference in fixed resistors.</p>
+            <p>Explain how current and resistance change with potential difference in filament lamps.</p>
+            <p>Explain how current and resistance change with potential difference in diodes, including light-emitting diodes (LEDs).</p>
+            <p>Describe how the resistance of a light-dependent resistor (LDR) varies with changing light intensity.</p>
+            <p>Describe how the resistance of a thermistor varies with changing temperature. (negative temperature coefficient only)</p>
+            <p>Describe the uses of diodes, LDRs and thermistors.</p>
+        </div>
+        <div id="CP9f Transferring energy" class="tabcontent">
+            <p>Describe the energy transfer that occurs when a current passes through a resistor.</p>
+            <p>Use the electron and ion model and the idea of electrical work to explain the energy transfer in a resistor and the resulting dissipation of energy in the surroundings.</p>
+            <p>H Explain how unwanted energy transfers in wires can be avoided.</p>
+            <p>Recall the advantages of the heating effect of an electric current.</p>
+            <p>Recall the disadvantages of the heating effect of an electric current.</p>
+            <p>Use the equation E = I multiplied by V and t to calculate the energy transferred, the current, the potential difference or the time.</p>
+        </div>
+        <div id="CP9g Power" class="tabcontent">
+            <p>Define power and the units used to measure it. (energy transferred per second in watts)</p>
+            <p>Recall and use the equation to calculate the power, the energy transferred or the time taken. (P = E/t)</p>
+            <p>Explain how power transfer depends on the potential difference across a device and the current through it.</p>
+            <p>Recall and use the equation to calculate the electrical power, the current or the potential difference. (P = I multiplied by V)</p>
+            <p>Recall and use the equation to calculate the electrical power, the current or the resistance. (P = I squared and multiplied by R)</p>
+        </div>
+        <div id="CP9h Transferring energy by electricity" class="tabcontent">
+            <p>Describe energy transfers from d.c. batteries and the a.c. mains supply to motors and heaters.</p>
+            <p>Explain the difference between direct and alternating voltage.</p>
+            <p>Compare alternating and direct current (in terms of movement of charge).</p>
+            <p>Recall the frequency and voltage of the UK domestic supply.</p>
+            <p>Describe the power ratings of some domestic electrical appliances and changes in stored energy when they are in use.</p>
+        </div>
+        <div id="CP9i Electrical safety" class="tabcontent">
+            <p>Explain the difference between the functions of the live and the neutral wires.</p>
+            <p>Explain how circuit breakers make circuits safer.</p>
+            <p>Explain how the earth wire and the fuse make circuits safer.</p>
+            <p>Explain why switches and fuses are connected in the live wire.</p>
+            <p>Recall the potential differences between the live, neutral and earth wires.</p>
+            <p>Explain the danger of a connection between the live wire and earth.</p>
+        </div>
+            <div class="clearfix"></div>
+    </div>
+
+    <!--CP10 and CP11 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="images/Magnetism-.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP10 Magnetism and the Motor Effect</h2>
+        <h2>CP11 Electromagnetic Induction</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP10a Magnets and magnetic fields')">CP10a Magnets and magnetic fields</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP10b Electromagnetism')">CP10b Electromagnetism</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP10c Magnetic forces')">CP10c Magnetic forces</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP11a Transformers')">CP11a Transformers</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP11b Transformers and energy')">CP11b Transformers and energy</button>
+        </div>
+        <div id="CP10a Magnets and magnetic fields" class="tabcontent">
+            <p>Describe how magnets affect each other.</p>
+            <p>Explain the difference between permanent and induced magnets.</p>
+            <p>Describe the uses of permanent and temporary magnetic materials.</p>
+            <p>Describe the shapes of magnetic fields, including variations in strength.</p>
+            <p>Describe how the shape of magnetic fields can be shown using plotting compasses.</p>
+            <p>Explain how a magnetic compass can be used as evidence for the Earth s magnetic core.</p>
+        </div>
+        <div id="CP10b Electromagnetism" class="tabcontent">
+            <p>Recall that a current can create a magnetic effect.</p>
+            <p>Relate the shape and direction of the magnetic field around a straight wire to the direction of the current.</p>
+            <p>Recall the factors that affect the strength of the magnetic field around a wire.</p>
+            <p>Describe the magnetic field inside and outside a coil of wire carrying a current.</p>
+            <p>Explain the shape and strength of the magnetic field around a solenoid.</p>
+        </div>
+        <div id="CP10c Magnetic forces" class="tabcontent">
+            <p>H Recall that forces are produced when a current flows in a magnetic field.</p>
+            <p>H Explain what causes the forces produced when a current flows in a magnetic field.</p>
+            <p>H Recall Fleming s left-hand rule.</p>
+            <p>H Use Fleming s left-hand rule.</p>
+            <p>H Use the formula relating force, magnetic field strength, current and length.</p>
+        </div>
+        <div id="CP11a Transformers" class="tabcontent">
+            <p>Recall the law of conservation of energy.</p>
+            <p>Recall that the power of an electric current is given by the current multiplied by the voltage.</p>
+            <p>Use the formula relating the input and output current and voltage for a transformer.</p>
+        </div>
+        <div id="CP11b Transformers and energy" class="tabcontent">
+            <p>H Recall the factors that affect the size and direction of an induced potential difference.</p>
+            <p>H Describe how the magnetic field produced by an induced potential difference opposes the original change.</p>
+            <p>H Explain how a transformer works.</p>
+            <p>Recall that transformers can change the voltage of an alternating current.</p>
+            <p>Describe how the national grid transmits electricity around the country.</p>
+            <p>Explain why step-up and step-down transformers are used in the national grid.</p>
+        </div>
+
+            <div class="clearfix"></div>
+    </div>
+    <!--CP12 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="images/snow-electricity-header.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP12 Particle Model</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP12a Particles and density')">CP12a Particles and density</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP12b Energy and changes of state')">CP12b Energy and changes of state</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP12c Energy calculations')">CP12c Energy calculations</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP12d Gas temperature and pressure')">CP12d Gas temperature and pressure</button>
+        </div>
+        <div id="CP12a Particles and density" class="tabcontent">
+            <p>Describe the arrangements of particles in solids, liquids and gases.</p>
+            <p>Use the particle model to explain the different properties of solids, liquids and gases.</p>
+            <p>Recall the formula relating density, mass and volume.</p>
+            <p>Use the formula relating density, mass and volume.</p>
+            <p>Use the particle model to explain why solids, liquids and gases have different densities.</p>
+            <p>Describe what happens to the mass of a substance when it changes state.</p>
+        </div>
+        <div id="CP12b Energy and changes of state" class="tabcontent">
+            <p>Explain how heating affects the particles in a substance or object, including changes of state.</p>
+            <p>Describe how the temperature of an object changes with time while being heated or cooled to make it change state.</p>
+            <p>Define the term specific heat capacity.</p>
+            <p>Define the term specific latent heat.</p>
+            <p>Explain the difference between specific heat capacity and specific latent heat.</p>
+            <p>Explain ways of reducing unwanted energy transfer through thermal insulation.</p>
+        </div>
+        <div id="CP12c Energy calculations" class="tabcontent">
+            <p>Use the formula relating change in thermal energy, mass, temperature change and specific heat capacity.</p>
+            <p>Use the formula relating thermal energy, mass and specific latent heat.</p>
+            <p>Recall that the value of specific latent</p>
+            <p>Recall that the value of specific latent heat for a substance is different for melting/solidifying and for evaporating/condensing.</p>
+        </div>
+        <div id="CP12d Gas temperature and pressure" class="tabcontent">
+            <p>Explain how the movement of particles causes gas pressure.</p>
+            <p>Explain how changing the temperature of a gas affects the speed of its particles.</p>
+            <p>Explain how temperature affects the pressure of a fixed mass of gas at constant volume.</p>
+            <p>Explain the significance of absolute zero.</p>
+            <p>Convert temperatures between the Kelvin and Celsius temperature scales.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+        <!--CP13 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="images/Is-a-longer-spring-stiffer.jpeg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP13 Forces and Matter</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP13a Bending and stretching')">CP13a Bending and stretching</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP13b Extension and energy transfers')">CP13b Extension and energy transfers</button>
+        </div>
+        <div id="CP13a Bending and stretching" class="tabcontent">
+            <p>Explain that more than one force is needed to distort an object.</p>
+            <p>Describe the difference between elastic and inelastic distortion.</p>
+            <p>Describe the relationship between force and extension for a spring.</p>
+            <p>Describe the relationship between force and extension for a rubber band.</p>
+            <p>Compare the force extension relationship for different objects.</p>
+        </div>
+        <div id="CP13b Extension and energy transfers" class="tabcontent">
+            <p>Recall the equation that links force, extension and the spring constant.</p>
+            <p>Use the formula relating force, extension and spring constant.</p>
+            <p>Recall that work has to be done to stretch a spring.</p>
+            <p>Use the formula relating the energy transferred to the extension of a spring.</p>
+        </div>
+            <div class="clearfix"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="images/eWL4wLHPH3vLkvttuz54vh.jpg" style="width:100%" onclick="currentSlide(1)" alt="Forces Doing Work and their Effects">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/electricity.webp" style="width:100%" onclick="currentSlide(2)" alt="Electricity and Circuits">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/Magnetism-.jpg" style="width:100%" onclick="currentSlide(3)" alt="Magnetism and Electromagnetic Induction">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/snow-electricity-header.jpg" style="width:100%" onclick="currentSlide(4)" alt="Particle model">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/Is-a-longer-spring-stiffer.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Forces and Matter">
+        </div>
+    </div>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>
