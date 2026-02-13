@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="stylechecklists-paper-1.css">-->
+<style>
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+    img{
+       width: 100%;
+       height: 25vh;
+       object-fit: cover;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Seven columns side by side */
+    .column {
+      float: left;
+      width: 14.28571429%;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 1px solid #ccc;
+          background-color: #e5e5e5;
+          width: 30%;
+          height: auto;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: inherit;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: #a69cac;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border-top: 1px solid #ccc;
+          width: 70%;
+          border-left: none;
+          height: 100%;
+          display: none;
+        }
+
+        /* Clear floats after the tab */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+</style>
+<body>
+
+<h2 style="text-align:center">Checklists paper 1</h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 7</div>
+        <img src="images/crystallisation.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC1 States of Matter</h2>
+        <h2>CC2 Methods of Separating and Purifying Substances</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC1a States of matter')">CC1a States of matter</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC2a Mixtures')">CC2a Mixtures</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC2b Filtration and crystallisation')">CC2b Filtration and crystallisation</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC2c Paper chromatography')">CC2c Paper chromatography</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC2d Distillation')">CC2d Distillation</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC2e Drinking water')">CC2e Drinking water</button>
+        </div>
+        <div id="CC1a States of matter" class="tabcontent">
+            <p>Name the three states of matter, and the physical changes that occur between them.</p>
+            <p>Describe the arrangements and movement of particles in the different states of matter.</p>
+            <p>Use information to predict the state of a substance.</p>
+            <p>Describe the relative energies of particles in the different states of matter.</p>
+            <p>Explain why the movement and arrangement of particles change during changes of state.</p>
+            <P>Explain why the energy of particles changes during changes of state.</p>
+<!--            <p><input type="checkbox" name="option1">Explain the difference between a vector and a scalar quantity.</p>-->
+<!--            <p><input type="checkbox" name="option1">Describe the difference between displacement and distance.</p>-->
+<!--            <p><input type="checkbox" name="option1">Describe the difference between velocity and speed.</p>-->
+<!--            <p><input type="checkbox" name="option1">Define the terms: acceleration, force, momentum, energy.</p>-->
+        </div>
+
+        <div id="CC2a Mixtures" class="tabcontent">
+            <p>Describe the differences between a pure substance and a mixture.</p>
+            <p>Use melting point information to decide whether a substance is pure or is a mixture.</p>
+            <p>Describe what happens to atoms at a pure substance s melting point.</p>
+            <p>Interpret a heating curve to identify a melting point.</p>
+            <p>Explain why the temperature does not change as a pure substance melts.</p>
+        </div>
+
+        <div id="CC2b Filtration and crystallisation" class="tabcontent">
+            <p>State some mixtures that can be separated by filtration.</p>
+            <p>State some mixtures that can be separated by crystallisation.</p>
+            <p>Draw and interpret diagrams showing how filtration and crystallisation are done.</p>
+            <p>Explain the formation of crystals during crystallisation.</p>
+            <p>Explain how mixtures are separated by filtration.</p>
+            <p>Explain ways of reducing risk when separating mixtures by filtration and crystallisation.</p>
+        </div>
+
+        <div id="CC2c Paper chromatography" class="tabcontent">
+            <p>Describe how some mixtures can be separated by chromatography.</p>
+            <p>Identify pure substances and mixtures on chromatograms.</p>
+            <p>Identify substances that are identical on chromatograms.</p>
+            <p>Draw and interpret diagrams showing how chromatography is done.</p>
+            <p>Explain how substances can be separated by chromatography.</p>
+            <p>Calculate Rf values and use them to identify substances.</p>
+        </div>
+
+        <div id="CC2d Distillation" class="tabcontent">
+            <p>Describe how to carry out, and explain what happens in, simple distillation.</p>
+            <p>Distinguish between simple distillation and fractional distillation.</p>
+            <p>Identify when fractional distillation should be used to separate a mixture.</p>
+            <p>Describe how to carry out fractional distillation.</p>
+            <P>Explain how the products of fractional distillation are linked to the boiling points of the components.</p>
+            <P>Explain what precautions are needed to reduce risk in a distillation experiment.</p>
+        </div>
+
+        <div id="CC2e Drinking water" class="tabcontent">
+            <p>Explain why water used in chemical analysis must not contain dissolved salts.</p>
+            <p>Describe how fresh water can be produced from seawater.</p>
+            <p>Describe the steps needed to make fresh water suitable for drinking.</p>
+            <p>Suggest how to purify water when you know what it contains.</p>
+            <p>Evaluate the hazards and control the risks present when purifying water.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 7</div>
+        <img src="images/atomicstructure.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC3 Atomic Structure</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC3a Structure of an atom')">CC3a Structure of an atom</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC3b Atomic number and mass number')">CC3b Atomic number and mass number</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC3c Isotopes')">CC3c Isotopes</button>
+        </div>
+        <div id="CC3a Structure of an atom" class="tabcontent">
+            <p>Describe how Dalton's ideas about atoms have changed.</p>
+            <p>Describe how the subatomic particles are arranged in an atom.</p>
+            <p>Explain how atoms of different elements are different.</p>
+            <p>Recall the charges and relative masses of the three subatomic particles.</p>
+            <P>Explain why all atoms have no overall charge.</p>
+            <P>Describe how the size of an atom compares to the size of its nucleus.</p>
+        </div>
+
+        <div id="CC3b Atomic number and mass number" class="tabcontent">
+            <p>State where most of the mass of an atom is found.</p>
+            <p>State the meaning of atomic number.</p>
+            <p>State the meaning of mass number.</p>
+            <P>Describe how the atoms of different elements vary.</p>
+            <P>State the number of electrons in an atom from its atomic number.</p>
+            <p>Calculate the numbers of protons, neutrons and electrons using atomic and mass numbers.</p>
+        </div>
+
+        <div id="CC3c Isotopes" class="tabcontent">
+            <p>State what is meant by an isotope.</p>
+            <p>Identify isotopes from information about the structure of atoms.</p>
+            <p>Calculate the numbers of protons, neutrons and electrons using atomic numbers and mass numbers.</p>
+            <p>Explain why the relative atomic mass of many elements is not a whole number.</p>
+            <p>H Calculate the relative atomic mass of an element from the relative masses and abundances of its isotopes.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 7</div>
+        <img src="images/periodictable.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC4 The Periodic Table</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC4a Elements and the periodic table')">CC4a Elements and the periodic table</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC4b Atomic number and the periodic table')">CC4b Atomic number and the periodic table</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC4c Electronic configurations and the periodic table')">CC4c Electronic configurations and the periodic table</button>
+        </div>
+        <div id="CC4a Elements and the periodic table" class="tabcontent">
+            <p>Recall the chemical symbols of some common elements.</p>
+            <p>Describe how Mendeleev arranged elements into a periodic table.</p>
+            <p>Describe how Mendeleev predicted the existence and properties of some elements yet to be discovered.</p>
+            <p>Explain how Mendeleev s early ideas were supported by later evidence.</p>
+        </div>
+        <div id="CC4b Atomic number and the periodic table" class="tabcontent">
+            <p>Explain some problems Mendeleev had when ordering the elements.</p>
+            <p>Explain the meaning of the term atomic number.</p>
+            <p>Describe how the elements are arranged in the modern periodic table.</p>
+            <p>Recall the positions of metals and non-metals in the periodic table.</p>
+        </div>
+        <div id="CC4c Electronic configurations and the periodic table" class="tabcontent">
+            <p>State what the term ‘electronic configuration’ means.</p>
+            <p>Show electronic configurations in the form 2.8.1 and as diagrams.</p>
+            <p>Predict the electronic configurations of the elements hydrogen to calcium.</p>
+            <p>Explain the links between an element s position in the periodic table and its electronic configuration.</p>
+            <p>Recall the positions of metals and non-metals in the periodic table.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">4 / 7</div>
+        <img src="images/covalentbonding.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC5 Ionic Bonding</h2>
+        <h2>CC6 Covalent Bonding</h2>
+        <h2>CC7 Types of Substance</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC5a Ionic bonds')">CC5a Ionic bonds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC5b Ionic lattices')">CC5b Ionic lattices</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC5c Properties of ionic compounds')">CC5c Properties of ionic compounds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC6a Covalent bonds')">CC6a Covalent bonds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC7a Molecular compounds')">CC7a Molecular compounds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC7b Allotropes of carbon')">CC7b Allotropes of carbon</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC7c Properties of metals')">CC7c Properties of metals</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC57d Bonding metals')">CC57d Bonding metals</button>
+        </div>
+        <div id="CC5a Ionic bonds" class="tabcontent">
+            <p>Recall the formulae of simple ions.</p>
+            <p>Explain how cations and anions are formed.</p>
+            <p>Use dot and cross diagrams to explain how ionic bonds are formed.</p>
+            <p>Explain the difference between an atom and an ion.</p>
+            <p>Calculate the numbers of protons, neutrons and electrons in simple ions.</p>
+            <p>Explain the formation of ions in groups 1, 2, 6 and 7 of the periodic table.</p>
+        </div>
+
+        <div id="CC5b Ionic lattices" class="tabcontent">
+            <p>Recall the formulae of common polyatomic ions, and the charges on them.</p>
+            <p>Interpret the use of -ide and -ate endings in the names of compounds.</p>
+            <p>Name ionic compounds using -ide and -ate endings.</p>
+            <p>Work out the formula of an ionic compound from the formulae of its ions.</p>
+            <p>Describe the structure of ionic compounds.</p>
+            <p>Explain how ionic compounds are held together.</p>
+        </div>
+
+        <div id="CC5c Properties of ionic compounds" class="tabcontent">
+            <p>Describe the properties of ionic compounds.</p>
+            <p>Explain why ionic compounds have high melting points and high boiling points.</p>
+            <p>Explain why ionic compounds conduct electricity when they are molten and in aqueous solution.</p>
+            <p>Explain why ionic compounds do not conduct electricity as solids.</p>
+            <p>Identify ionic compounds from data about their properties.</p>
+        </div>
+
+        <div id="CC6a Covalent bonds" class="tabcontent">
+            <p>Explain how covalent bonds are formed.</p>
+            <p>Recall the names of some common molecular elements.</p>
+            <p>Recall the names of some common molecular compounds.</p>
+            <p>State the bonding that is found in molecules.</p>
+            <p>State the approximate size (order or magnitude) of atoms and small molecules.</p>
+            <p>Explain the formation of covalent bonds using dot and cross diagrams.</p>
+        </div>
+
+        <div id="CC7a Molecular compounds" class="tabcontent">
+            <p>Recall examples of common covalent, simple molecular compounds.</p>
+            <p>Describe the general properties of covalent, simple molecular compounds.</p>
+            <p>Explain why covalent, simple molecular compounds have low melting and boiling points.</p>
+            <p>Explain why covalent, simple molecular compounds are poor conductors of electricity.</p>
+            <p>Describe the structure of a polymer.</p>
+        </div>
+
+        <div id="CC7b Allotropes of carbon" class="tabcontent">
+            <p>Recall some allotropes of carbon.</p>
+            <p>Describe the basic differences between covalent, simple molecules and giant covalent structures.</p>
+            <P>Describe the structures of diamond, graphite, fullerenes and graphene.</p>
+            <P>Describe the properties of diamond, graphite, fullerenes and graphene.</p>
+            <P>Explain the properties and uses of diamond and graphite in terms of their structure and bonding.</p>
+            <p>Explain the properties of fullerenes and graphene in terms of their structure and bonding.</p>
+        </div>
+
+        <div id="CC7c Properties of metals" class="tabcontent">
+            <p>Describe the particles and how they are arranged in metals.</p>
+            <p>Explain why metals are malleable.</p>
+            <p>Explain why metals conduct electricity.</p>
+            <p>Describe the typical properties of metals.</p>
+            <p>Describe the typical properties of non-metals.</p>
+        </div>
+        <div id="CC7d Bonding metals" class="tabcontent">
+            <p>Give examples of ionic; covalent, simple molecular; covalent, giant molecular; and metallic substances.</p>
+            <p>Describe how the different types of bonds and structures are formed.</p>
+            <p>Explain how the structure and bonding of a substance is linked to its physical properties. (Relative melting point and boiling point, relative solubility in water and ability to conduct electricity, as solids and in solution.)</p>
+            <p>Explain why we use models to represent structure and bonding.</p>
+            <p>Represent structures and bonding using a variety of different models (dot and cross, ball and stick, 2D, 3D).</p>
+            <p>Describe the limitations of the different models used to represent structure and bonding (dot and cross, ball and stick, 2D, 3D).</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 7</div>
+        <img src="images/acids.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC8 Acids and Alkalis</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC8a Acids, alkalis and indicators')">CC8a Acids, alkalis and indicators</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC8b Looking at acids')">CC8b Looking at acids</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC8c Bases and salts')">CC8c Bases and salts</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC8d Alkalis and balancing equations')">CC8d Alkalis and balancing equations</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC8e Alkalis and neutralisation')">CC8e Alkalis and neutralisation</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC8f Reactions of acids with metals and carbonates')">CC8f Reactions of acids with metals and carbonates</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC8g Solubility')">CC8g Solubility</button>
+        </div>
+        <div id="CC8a Acids, alkalis and indicators" class="tabcontent">
+            <p>Describe what the main hazard symbols mean.</p>
+            <p>Describe the safety precautions that should be observed when handling different acids and alkalis.</p>
+            <p>Name the ions present in all acidic and all alkaline solutions.</p>
+            <p>State the pH values associated with acidic, alkaline and neutral solutions.</p>
+            <p>Describe the effect of acids and alkalis on common indicators.</p>
+            <p>H Explain the link between pH and the concentration of ions in acids and alkalis.</p>
+        </div>
+        <div id="CC8b Looking at acids" class="tabcontent">
+            <p>H Describe the relationship between hydrogen ion concentration and pH.</p>
+            <p>H Explain the difference between a dilute and concentrated solution (in terms of the amount of solute present).</p>
+            <p>H Explain the difference between strong and weak acids (in terms of the degree of dissociation of the acid molecules).</p>
+            <p>H Explain how the pH and reactivity of an acid depend on the concentration and the strength of the acid.</p>
+        </div>
+        <div id="CC8c Bases and salts" class="tabcontent">
+            <p>Describe how a base reacts in a neutralisation reaction.</p>
+            <p>Describe what happens when an acid reacts with a metal oxide.</p>
+            <p>Write word equations for the reactions of acids and metal oxides.</p>
+            <p>Write symbol equations for the reactions of acids and metal oxides.</p>
+            <p>Explain what happens during a neutralisation reaction.</p>
+            <p>Describe the steps involved in preparing a soluble salt from an acid and an insoluble reactant.</p>
+            <p>Explain why: an excess of insoluble reactant is used when preparing a soluble salt the excess reactant is removed when preparing a soluble salt the remaining solution contains only a salt and water, when preparing a soluble salt from an acid and an insoluble reactant.</p>
+        </div>
+        <div id="CC8d Alkalis and balancing equations" class="tabcontent">
+            <p>Recall the chemical formulae of some common compounds.</p>
+            <p>Recall and use state symbols.</p>
+            <p>Balance chemical equations.</p>
+            <p>Recall that alkalis are soluble bases.</p>
+            <p>Describe the reactions of alkalis with acids.</p>
+        </div>
+        <div id="CC8e Alkalis and neutralisation" class="tabcontent">
+            <p>Explain what happens to the ions from acids and alkalis during neutralisation.</p>
+            <p>Explain why titration is used to prepare soluble salts.</p>
+            <p>Describe how to carry out an acid-alkali titration.</p>
+        </div>
+        <div id="CC8f Reactions of acids with metals and carbonates" class="tabcontent">
+            <p>H Write balanced ionic equations.</p>
+            <p>Explain the general reaction between an acid and a metal to produce a salt and hydrogen.</p>
+            <p>Explain the general reaction between an acid and a metal carbonate to produce a salt, water and carbon dioxide.</p>
+            <p>Describe the test for hydrogen.</p>
+            <p>Describe the test for carbon dioxide.</p>
+        </div>
+        <div id="CC8g Solubility" class="tabcontent">
+            <p>Recall the general rules for the solubility of common substances in water.</p>
+            <p>Predict whether or not a precipitate will form from two solutions.</p>
+            <p>Name the precipitate formed in a reaction.</p>
+            <p>Describe how to prepare a pure, dry sample of an insoluble salt.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">6 / 7</div>
+        <img src="images/calculationschemistry.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC9 Calculations Involving Masses</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC9a Masses and empirical formulae')">CC9a Masses and empirical formulae</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC9b Conservation of mass')">CC9b Conservation of mass</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC9c Moles')">CC9c Moles</button>
+        </div>
+        <div id="CC9a Masses and empirical formulae" class="tabcontent">
+            <p>Calculate the relative formula mass of a substance from relative atomic masses.</p>
+            <p>Calculate the empirical formula of a compound from the masses of the elements it contains.</p>
+            <p>Explain the difference between an empirical formula and a molecular formula.</p>
+            <p>Deduce the empirical formula from a molecular formula.</p>
+            <p>Deduce the molecular formula for a compound from its empirical formula and its relative formula mass.</p>
+            <p>Describe an experiment to determine the empirical formula for a compound.</p>
+        </div>
+        <div id="CC9b Conservation of mass" class="tabcontent">
+            <p>Explain the law of conservation of mass in a closed system.</p>
+            <p>Explain the law of conservation of mass in a non-enclosed system.</p>
+            <p>Calculate the mass of product formed from a given mass of reactant, using a balanced equation.</p>
+            <p>Calculate the mass of a reactant needed to produce a given amount of product, using a balanced equation.</p>
+            <p>Calculate the concentration of a solution in g dm-3.</p>
+        </div>
+        <div id="CC9c Moles" class="tabcontent">
+            <p>H Describe what is meant by a mole of particles.</p>
+            <p>H Calculate the number of moles of particles in a given mass of a certain substance and vice versa.</p>
+            <p>H Calculate the number of particles in a given number of moles or mass of a substance and vice versa.</p>
+            <p>H Explain that the mass of a product formed in a reaction is controlled by the mass of reactant that is not in excess.</p>
+            <p>H Deduce the balanced equation for a reaction from the masses of reactants and/or products.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">7 / 7</div>
+        <img src="images/ores.png" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CC10 Electrolytic Processes</h2>
+        <h2>CC11 Obtaining and Using Metals</h2>
+        <h2>CC12 Reversible Reactions and Equilibria</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CC10a Electrolysis')">CC10a Electrolysis</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC10b Products from electrolysis')">CC10b Products from electrolysis</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC11a Reactivity')">CC11a Reactivity</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC11b Ores')">CC11b Ores</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC11c Oxidation and reduction')">CC11c Oxidation and reduction</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC11d Life cycle assessment and recycling')">CC11d Life cycle assessment and recycling</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CC12a Dynamic equilibrium')">CC12a Dynamic equilibrium</button>
+        </div>
+        <div id="CC10a Electrolysis" class="tabcontent">
+            <p>State the meaning of the term 'electrolyte'.</p>
+            <p>Outline what happens during electrolysis.</p>
+            <p>Explain the movement of the ions during electrolysis.</p>
+            <p>H Write half equations for the reactions at the electrodes.</p>
+            <p>H Explain the meaning of oxidation and reduction in terms of the movement of electrons.</p>
+            <p>H State the electrodes at which oxidation and reduction occur.</p>
+        </div>
+        <div id="CC10b Products from electrolysis" class="tabcontent">
+            <p>Recall the products formed from the electrolysis of a variety of common compounds and solutions (copper chloride solution, sodium chloride solution, sodium sulfate solution, acidified water, molten lead bromide).</p>
+            <p>Explain the formation of the products in the electrolysis of a variety of common compounds and solutions (copper chloride solution, sodium chloride solution, sodium sulfate solution, acidified water, molten lead bromide).</p>
+            <p>Predict the products formed from the electrolysis of a molten, binary, ionic compound.</p>
+            <p>Explain how the electrolysis of copper sulfate solution using copper electrodes can be used to purify copper.</p>
+        </div>
+        <div id="CC11a Reactivity" class="tabcontent">
+            <p>Describe the reactions of common metals with water and acids.</p>
+            <p>Describe the reactions of metals with salt solutions.</p>
+            <p>H Explain why displacement reactions are redox reactions.</p>
+            <p>Deduce the order of metals in the reactivity series from their reactions with water, acids and salt solutions.</p>
+            <p>Explain the reactivity series in terms of the tendency of different metal atoms to form cations.</p>
+        </div>
+        <div id="CC11b Ores" class="tabcontent">
+            <p>Recall the meaning of the term 'ore'.</p>
+            <p>Recall some metals that are found uncombined in the Earth's crust.</p>
+            <p>Explain how and why some metals are extracted from their ores by heating with carbon.</p>
+            <p>Explain how and why some metals are extracted from their ores by electrolysis.</p>
+            <p>H Describe two biological methods of metal extraction.</p>
+            <p>H Evaluate biological methods of metal extraction.</p>
+        </div>
+        <div id="CC11c Oxidation and reduction" class="tabcontent">
+            <p>H Explain why reactions occurring at the electrodes during electrolysis are redox reactions.</p>
+            <p>Describe the meanings of oxidation and reduction in terms of oxygen.</p>
+            <p>Explain which substance has been oxidised and which substance has been reduced in a reaction.</p>
+            <p>Recall that all metals are extracted by reduction of their ores.</p>
+            <p>Explain how the position of a metal in the reactivity series is related to its resistance to oxidation.</p>
+        </div>
+        <div id="CC11d Life cycle assessment and recycling" class="tabcontent">
+            <p>State the advantages and disadvantages of recycling a metal.</p>
+            <p>Describe a process where a material or product is recycled for a different use.</p>
+            <p>Evaluate the advantages and disadvantages of recycling a material or product to decide whether recycling is a viable option.</p>
+            <p>Describe the four stages in carrying out a life cycle assessment (LCA) of a material or product.</p>
+            <p>Evaluate data from a life cycle assessment of a material or product.</p>
+        </div>
+        <div id="CC12a Dynamic equilibrium" class="tabcontent">
+            <p>Describe what happens in reversible reactions.</p>
+            <p>Explain the use of the symbol -> and <- together in chemical equations.</p>
+            <p>Explain what is meant by dynamic equilibrium.</p>
+            <p>Describe the formation of ammonia.</p>
+            <p>State the conditions used for the Haber process.</p>
+            <p>H Describe how changing the temperature, pressure and concentration all affect the relative amount of substances in an equilibrium mixture.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="images/crystallisation.png" style="width:100%" onclick="currentSlide(1)" alt="States of Matter; Methods of Separating and Purifying Substances">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/atomicstructure.png" style="width:100%" onclick="currentSlide(2)" alt="Atomic Structure">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/periodictable.png" style="width:100%" onclick="currentSlide(3)" alt="The Periodic Table">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/covalentbonding.png" style="width:100%" onclick="currentSlide(4)" alt="Ionic Bonding; Covalent Bonding; Types of Substance">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/acids.png" style="width:100%" onclick="currentSlide(5)" alt="Acids">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/calculationschemistry.png" style="width:100%" onclick="currentSlide(6)" alt="Calculations Involving Masses">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/ores.png" style="width:100%" onclick="currentSlide(7)" alt="Electrolytic Processes; Obtaining and Using Metals; Reversible Reactions and Equilibria">
+        </div>
+    </div>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #f5f5f5;
+        }
+
+        .topnav {
+          overflow: hidden;
+          background-color: #161B33;
+        }
+
+        .topnav a {
+          float: left;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          background-color: #A69CAC;
+          color: black;
+        }
+
+        .topnav a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+
+        h1 {
+          color: #474973;
+          font-size: 25px;
+          margin: 0;
+          margin-top: 1rem;
+          @media (max-width: 800px){
+                 font-size: 18px;
+                    }
+        }

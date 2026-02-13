@@ -1,0 +1,1018 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Product Showcase Grid</title>
+    <style>
+        :root {
+            --primary-color: #0a1929;
+            --secondary-color: #102a43;
+            --accent-color: #00c9ff;
+            --accent-hover: #00a3cc;
+            --text-color: #f0f4f8;
+            --text-secondary: #bcccdc;
+            --success-color: #00d084;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            height: 700px;
+            overflow-y: auto;
+            padding: 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-color) var(--secondary-color);
+        }
+
+        .container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: var(--secondary-color);
+            border-radius: 3px;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background-color: var(--accent-color);
+            border-radius: 3px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+            background: linear-gradient(120deg, var(--accent-color), #7f5af0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background-color: var(--secondary-color);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            height: 280px;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .product-card:hover .product-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card:hover .product-header {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-header {
+            padding: 1rem;
+            transition: transform 0.3s, opacity 0.3s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(0deg, var(--secondary-color) 70%, transparent);
+        }
+
+        .product-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .product-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 25, 41, 0.9);
+            backdrop-filter: blur(5px);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+        }
+
+        .spec-list {
+            list-style: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-item {
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .spec-item::before {
+            content: "•";
+            color: var(--accent-color);
+            margin-right: 5px;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .cta-button i {
+            margin-left: 0.5rem;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background-color: var(--success-color);
+            color: var(--primary-color);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.25rem 2rem;
+            transform: rotate(45deg);
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .sorting {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            gap: 0.5rem;
+        }
+
+        .sort-button {
+            background: none;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .sort-button:hover, .sort-button.active {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border-color: var(--accent-color);
+        }
+
+        .product-pulse {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            z-index: 2;
+        }
+
+        .product-pulse::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            opacity: 0.7;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            70% {
+                transform: scale(2);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .product-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 25, 41, 0.9);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            padding: 1rem;
+        }
+
+        .product-modal.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background-color: var(--secondary-color);
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .product-modal.show .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-color);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-specs {
+            margin: 1rem 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .modal-spec-item {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .modal-spec-label {
+            color: var(--text-secondary);
+            margin-right: 0.5rem;
+            min-width: 100px;
+        }
+
+        .modal-cta {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .modal-button {
+            flex: 1;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .modal-button.primary {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+        }
+
+        .modal-button.secondary {
+            background: none;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .modal-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-button.primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .modal-button.secondary:hover {
+            background-color: rgba(0, 201, 255, 0.1);
+        }
+
+        .price-tag {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 0.5rem 0;
+        }
+
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .availability.in-stock {
+            color: var(--success-color);
+        }
+
+        .availability.in-stock::before {
+            content: "●";
+            margin-right: 0.25rem;
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 1rem;
+            }
+
+            .product-card {
+                height: 240px;
+            }
+
+            .product-image {
+                height: 120px;
+            }
+
+            .sorting {
+                flex-wrap: wrap;
+            }
+
+            .modal-specs {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Loading animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 3px solid transparent;
+            border-top-color: var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .loader::before, .loader::after {
+            content: "";
+            position: absolute;
+            border: 3px solid transparent;
+            border-radius: 50%;
+        }
+
+        .loader::before {
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-top-color: #7f5af0;
+            animation: spin 2s linear infinite;
+        }
+
+        .loader::after {
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-top-color: var(--success-color);
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Tooltip styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.75rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--secondary-color) transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            z-index: 10;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background-color: var(--accent-hover);
+        }
+
+        /* Badge count */
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #ff3860;
+            color: white;
+            font-size: 0.7rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="loading-screen">
+    <div class="loader"></div>
+</div>
+
+<div class="container">
+    <header>
+        <h1>Combined science</h1>
+        <p class="subtitle">Equations</p>
+        <div class="sorting">
+            <button class="sort-button active" data-category="all">All</button>
+            <button class="sort-button" data-category="computing">Biology</button>
+            <button class="sort-button" data-category="mobile">Chemistry</button>
+            <button class="sort-button" data-category="audio">Physics</button>
+        </div>
+    </header>
+
+    <div class="product-grid">
+        <!-- Products will be dynamically inserted here -->
+    </div>
+</div>
+
+<div class="product-modal">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <img class="modal-image" src="" alt="Product">
+        <h2 class="modal-title"></h2>
+        <div class="availability in-stock">In Stock</div>
+        <p class="modal-description"></p>
+        <div class="price-tag"></div>
+        <div class="modal-specs">
+            <!-- Specs will be filled dynamically -->
+        </div>
+        <div class="modal-buttons">
+            <button class="modal-button primary">Add to Cart</button>
+            <button class="modal-button secondary">Save for Later</button>
+        </div>
+    </div>
+</div>
+
+<div class="fab tooltip">
+    <span class="tooltiptext">View Cart</span>
+    <div class="badge">2</div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+</div>
+
+<script>
+    // Product data
+    const products = [
+        {
+            id: 1,
+            name: "QuantumBook Pro",
+            category: "computing",
+            subtitle: "Ultra-thin laptop",
+            image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+            specs: [
+                "5nm Quantum Processor",
+                "32GB Neural RAM",
+                "1TB Molecular SSD",
+                "16.2\" Retina XDR"
+            ],
+            price: "$2,299",
+            description: "The QuantumBook Pro redefines mobile computing with its revolutionary 5nm quantum processor delivering unprecedented performance while consuming 45% less power than previous generations.",
+            isNew: true,
+            fullSpecs: {
+                "Processor": "Quantum Core i9, 14-core",
+                "Memory": "32GB LPDDR5-6400",
+                "Storage": "1TB Molecular-State Drive",
+                "Display": "16.2\" Liquid Retina XDR (3456 × 2234)",
+                "Graphics": "Neural Engine Pro 32-core",
+                "Battery": "100Wh, up to '22 hours",
+                "Weight": "2.1 lbs (0.95 kg)"
+            }
+        },
+        {
+            id: 2,
+            name: "NeuroPhone Z",
+            category: "mobile",
+            subtitle: "Neural interface smartphone",
+            image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+            specs: [
+                "Neural Response Interface",
+                "7.1\" Flex OLED",
+                "3-day Graphene Battery",
+                "Molecular Camera System"
+            ],
+            price: "$1,149",
+            description: "The NeuroPhone Z introduces our patented Neural Response Interface, allowing intuitive control through micro-gestures and thought patterns for a truly hands-free experience.",
+            isNew: true,
+            fullSpecs: {
+                "Processor": "BioCore A16, 6-core",
+                "Memory": "16GB Unified",
+                "Storage": "512GB NVMe",
+                "Display": "7.1\" Dynamic AMOLED (2400 × 1080)",
+                "Camera": "108MP Molecular System",
+                "Battery": "Graphene 6000mAh",
+                "Biometrics": "3D Neural Scanner"
+            }
+        },
+        {
+            id: 3,
+            name: "SonicCloud Buds",
+            category: "audio",
+            subtitle: "Spatial audio earbuds",
+            image: "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+            specs: [
+                "360° Spatial Audio",
+                "40hrs Battery Life",
+                "Adaptive EQ Profiling",
+                "Neural Noise Cancellation"
+            ],
+            price: "$249",
+            description: "SonicCloud Buds create a personalized soundscape that adapts in real-time to your environment, featuring our proprietary Neural Noise Cancellation that learns and blocks specific unwanted sounds.",
+            isNew: false,
+            fullSpecs: {
+                "Driver": "13mm Graphene Dynamic",
+                "Frequency Response": "5Hz-40kHz (extended range)",
+                "Battery Life": "10hrs (buds), 30hrs (case)",
+                "Connectivity": "Bluetooth 6.0, Ultra-Wideband",
+                "Water Resistance": "IPX7 (fully waterproof)",
+                "Features": "Real-time translation, health monitoring",
+                "Charging": "Wireless Qi, USB-C"
+            }
+        },
+        {
+            id: 4,
+            name: "Vision Pro Desktop",
+            category: "computing",
+            subtitle: "AR workstation",
+            image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+            specs: [
+                "Holographic Interface",
+                "128-core Processor Grid",
+                "64TB Neural Storage",
+                "Quantum Cooling System"
+            ],
+            price: "$3,499",
+            description: "The Vision Pro Desktop combines a physical workstation with an integrated AR environment, projecting unlimited virtual screens that follow you around your workspace with zero latency.",
+            isNew: false,
+            fullSpecs: {
+                "Processor": "Quantum Grid 128-core",
+                "Memory": "128GB DDR6",
+                "Storage": "4TB PCIe 5.0 NVMe",
+                "Graphics": "RTX 5090 Ti, 32GB GDDR7",
+                "Holographic System": "8K per eye projection",
+                "Cooling": "Quantum Liquid System",
+                "Connectivity": "Thunderbolt 5, Wi-Fi 7"
+            }
+        },
+        {
+            id: 5,
+            name: "NeuroPad Mini",
+            category: "mobile",
+            subtitle: "Neural tablet",
+            image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+            specs: [
+                "Tactile Feedback Display",
+                "Neural Stylus Pro",
+                "Bio-adaptive Interface",
+                "360° Spatial Cameras"
+            ],
+            price: "$899",
+            description: "The NeuroPad Mini features our revolutionary tactile feedback display, creating physical texture sensations for digital content through microscopic surface deformations.",
+            isNew: false,
+            fullSpecs: {
+                "Processor": "NeurCore A15 Bionic",
+                "Memory": "16GB LPDDR5X",
+                "Storage": "1TB NVMe",
+                "Display": "11\" Tactile Liquid Retina",
+                "Cameras": "4D LiDAR System",
+                "Battery": "15 hours continuous use",
+                "Biometrics": "In-screen Neural ID"
+            }
+        },
+        {
+            id: 6,
+            name: "AcoustiSphere X",
+            category: "audio",
+            subtitle: "Spatial smart speaker",
+            image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+            specs: [
+                "Holographic Sound Field",
+                "Room-sensing Calibration",
+                "8K Audio Resolution",
+                "Ambient Intelligence"
+            ],
+            price: "$399",
+            description: "The AcoustiSphere X creates a true holographic sound field, placing individual audio elements anywhere in 3D space with pinpoint accuracy that follows you as you move around.",
+            isNew: true,
+            fullSpecs: {
+                "Drivers": "12 beam-forming speakers",
+                "Subwoofer": "8\" downward-firing",
+                "Amplifier": "1500W total output",
+                "Frequency Response": "16Hz-25kHz",
+                "Room Calibration": "360° spatial mapping",
+                "Connectivity": "Wi-Fi 6E, Bluetooth 5.3, HDMI eARC",
+                "Assistant": "NeoVoice with offline processing"
+            }
+        }
+    ];
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Wait for a short moment to simulate loading
+        setTimeout(() => {
+            // Hide loading screen
+            document.querySelector('.loading-screen').classList.add('hidden');
+
+            // Render products
+            renderProducts('all');
+
+            // Add event listeners for sorting buttons
+            document.querySelectorAll('.sort-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.sort-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Render products based on selected category
+                    renderProducts(this.dataset.category);
+                });
+            });
+
+            // Modal close button
+            document.querySelector('.modal-close').addEventListener('click', function() {
+                document.querySelector('.product-modal').classList.remove('show');
+            });
+
+            // Close modal when clicking outside content
+            document.querySelector('.product-modal').addEventListener('click', function(event) {
+                if (event.target === this) {
+                    this.classList.remove('show');
+                }
+            });
+
+            // Modal buttons
+            document.querySelectorAll('.modal-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Show notification (if this was a real app)
+                    const notification = document.createElement('div');
+                    notification.style.position = 'fixed';
+                    notification.style.bottom = '20px';
+                    notification.style.left = '50%';
+                    notification.style.transform = 'translateX(-50%)';
+                    notification.style.backgroundColor = 'var(--success-color)';
+                    notification.style.color = 'var(--primary-color)';
+                    notification.style.padding = '0.75rem 1.5rem';
+                    notification.style.borderRadius = '4px';
+                    notification.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                    notification.style.zIndex = '1000';
+                    notification.style.transition = 'opacity 0.3s, transform 0.3s';
+                    notification.innerText = this.classList.contains('primary') ? 'Added to cart!' : 'Saved for later!';
+
+                    document.body.appendChild(notification);
+
+                    // Remove notification after 3 seconds
+                    setTimeout(() => {
+                        notification.style.opacity = '0';
+                        notification.style.transform = 'translateX(-50%) translateY(20px)';
+                        setTimeout(() => {
+                            notification.remove();
+                        }, 300);
+                    }, 3000);
+
+                    // Close modal
+                    document.querySelector('.product-modal').classList.remove('show');
+                });
+            });
+
+            // FAB button
+            document.querySelector('.fab').addEventListener('click', function() {
+                alert('Cart functionality would open here');
+            });
+        }, 1000);
+    });
+
+    // Function to render products based on category
+    function renderProducts(category) {
+        const grid = document.querySelector('.product-grid');
+        grid.innerHTML = '';
+
+        // Filter products based on category
+        const filteredProducts = category === 'all'
+            ? products
+            : products.filter(product => product.category === category);
+
+        // Add products to grid
+        filteredProducts.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.dataset.id = product.id;
+
+            let cardContent = `
+                <img src="${product.image}" alt="${product.name}" class="product-image">
+                <div class="product-pulse"></div>
+                ${product.isNew ? '<div class="ribbon">NEW</div>' : ''}
+                <div class="product-header">
+                    <h3 class="product-title">${product.name}</h3>
+                    <p class="product-subtitle">${product.subtitle}</p>
+                </div>
+                <div class="product-info">
+                    <ul class="spec-list">
+            `;
+
+            // Add specs
+            product.specs.forEach(spec => {
+                cardContent += `<li class="spec-item">${spec}</li>`;
+            });
+
+            cardContent += `
+                    </ul>
+                    <button class="cta-button">View Details</button>
+                </div>
+            `;
+
+            card.innerHTML = cardContent;
+            grid.appendChild(card);
+
+            // Add click event to open modal
+            card.addEventListener('click', function() {
+                openProductModal(product.id);
+            });
+        });
+
+        // Add animation to cards
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 50 * index);
+        });
+    }
+
+    // Function to open product modal
+    function openProductModal(productId) {
+        const product = products.find(p => p.id === productId);
+        const modal = document.querySelector('.product-modal');
+
+        // Fill modal with product details
+        modal.querySelector('.modal-image').src = product.image;
+        modal.querySelector('.modal-image').alt = product.name;
+        modal.querySelector('.modal-title').textContent = product.name;
+        modal.querySelector('.modal-description').textContent = product.description;
+        modal.querySelector('.price-tag').textContent = product.price;
+
+        // Fill specs
+        const specsContainer = modal.querySelector('.modal-specs');
+        specsContainer.innerHTML = '';
+
+        for (const [key, value] of Object.entries(product.fullSpecs)) {
+            const specItem = document.createElement('div');
+            specItem.className = 'modal-spec-item';
+            specItem.innerHTML = `
+                <span class="modal-spec-label">${key}:</span>
+                <span class="modal-spec-value">${value}</span>
+            `;
+            specsContainer.appendChild(specItem);
+        }
+
+        // Show modal
+        modal.classList.add('show');
+    }
+</script>
+</body>
+</html>
+
+9) Elegant Lookbook Grid
+
+Here's the code:
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPHEMERE – SS24 Lookbook</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #f0f0f0;
+            --accent-color: #ff3366;
+            --text-color: #333;
+            --spacing-unit: 8px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--secondary-color);
+        }
+    </style>

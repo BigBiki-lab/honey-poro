@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="stylechecklists-paper-1.css">-->
+<style>
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+    img{
+       width: 100%;
+       height: 25vh;
+       object-fit: cover;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Seven columns side by side */
+    .column {
+      float: left;
+      width: 16.667%;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 1px solid #ccc;
+          background-color: #e5e5e5;
+          width: 30%;
+          height: auto;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: inherit;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: #a69cac;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border-top: 1px solid #ccc;
+          width: 70%;
+          border-left: none;
+          height: 100%;
+          display: none;
+        }
+
+        /* Clear floats after the tab */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+</style>
+<body>
+
+<h2 style="text-align:center">Checklists paper 2</h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/bccells.webp" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CB1 Key Concepts in Biology 1</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CB1a Microscopes')">CB1a Microscopes</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB1b Plant and animal cells')">CB1b Plant and animal cells</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB1c Specialised cells')">CB1c Specialised cells</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB1d Inside bacteria')">CB1d Inside bacteria</button>
+        </div>
+
+        <div id="CB1a Microscopes" class="tabcontent">
+            <p>Recall what an electron microscope is.</p>
+            <!--            <p><input type="checkbox" name="option1">Describe the difference between weight and mass.</p>-->
+            <p>Recall what is meant by an instrument s resolution.</p>
+            <p>Explain why some cell structures can be seen with an electron microscope but not with a light microscope.</p>
+            <p>Calculate total magnification using an equation.</p>
+            <p>Calculate sizes using magnifications.</p>
+            <p>Interpret the SI prefixes milli-, micro-, nano- and pico-.</p>
+            <!--            <p><input type="checkbox" name="option1">Explain the difference between a vector and a scalar quantity.</p>-->
+            <!--            <p><input type="checkbox" name="option1">Describe the difference between displacement and distance.</p>-->
+            <!--            <p><input type="checkbox" name="option1">Describe the difference between velocity and speed.</p>-->
+            <!--            <p><input type="checkbox" name="option1">Define the terms: acceleration, force, momentum, energy.</p>-->
+        </div>
+
+        <div id="CB1b Plant and animal cells" class="tabcontent">
+            <p>Identify the parts of plant and animal cells.</p>
+            <p>Recall the parts of plant and animal cells.</p>
+            <p>Make drawings of plant and animal cells using a light microscope and identify their parts.</p>
+            <p>Describe the functions of the sub-cellular structures commonly found in eukaryotic cells (nucleus, cell membrane, cell wall, chloroplasts, mitochondria and ribosomes).</p>
+            <p>Estimate sizes using microscope fields of view.</p>
+            <p>Estimate sizes using scale bars.</p>
+        </div>
+
+        <div id="CB1c Specialised cells" class="tabcontent">
+            <p>Describe how sperm cells are adapted to their function.</p>
+            <p>Describe how egg cells are adapted to their function.</p>
+            <p>Describe how ciliated epithelial cells are adapted to their function.</p>
+            <p>Draw conclusions about a cell s function from its adaptations.</p>
+        </div>
+
+        <div id="CB1d Inside bacteria" class="tabcontent">
+            <p>Identify the common parts of bacteria.</p>
+            <p>Describe the functions of common parts of bacteria.</p>
+            <p>Describe why bacteria are classified as being prokaryotic.<p>
+            <p>Change numbers to and from standard form.</p>
+            <p>Compare eukaryotic and prokaryotic cells.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+<!--CB1b checklist-->
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/bcaminoacids2.webp" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CB1 Key Concepts in Biology 2</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CB1e Enzymes and nutrition')">CB1e Enzymes and nutrition</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB1f Enzyme action')">CB1f Enzyme action</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB1g Enzyme activity')">CB1g Enzyme activity</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB1h Transporting substances')">CB1h Transporting substances</button>
+        </div>
+
+        <div id="CB1e Enzymes and nutrition" class="tabcontent">
+            <p>State that enzymes are proteins.</p>
+            <p>Give examples of enzymes and where they are found in the human body and in other species.</p>
+            <p>Recall the subunits from which carbohydrates, proteins and lipids are formed (sugars, amino acids, fatty acids and glycerol).</p>
+            <p>Describe what enzymes do (catalyse the synthesis and breakdown of substances, such as carbohydrates, proteins and lipids, by speeding up the rate of reaction).</p>
+            <p>Define an enzyme as a biological catalyst.</p>
+            <p>Explain why catalysis by enzymes is important for life processes (because reactions happen much faster).</p>
+        </div>
+
+        <div id="CB1f Enzyme action" class="tabcontent">
+            <p>State what enzyme specificity means.</p>
+            <p>State that an enzyme's action is due to its active site.</p>
+            <p>Describe the role of the active site in enzyme function (including specificity).</p>
+            <p>Use the lock-and-key model to develop explanations for enzyme activity.</p>
+            <p>Explain why enzymes have a particular shape, as a result of the sequence of amino acids in the chain.</p>
+            <p>Explain how enzymes become denatured.</p>
+        </div>
+
+        <div id="CB1g Enzyme activity" class="tabcontent">
+            <p>Describe the effect of temperature on enzyme activity.</p>
+            <p>Describe the effect of substrate concentration on enzyme activity.</p>
+            <p>Describe the effect of pH on enzyme activity.</p>
+            <p>Explain what is meant by the optimum pH/temperature of an enzyme.</p>
+            <p>Calculate the rate of enzyme activity from experimental data.</p>
+            <p>Explain why temperature, substrate concentration and pH affect enzyme activity.</p>
+        </div>
+
+        <div id="CB1h Transporting substances" class="tabcontent">
+            <p>State that substances are transported by diffusion, osmosis and active transport.</p>
+            <p>Describe how substances are transported by active transport (including the need for energy).</p>
+            <p>Explain how substances are transported by diffusion.</p>
+            <p>Explain how substances are transported by osmosis.</p>
+            <p>Explain the effects of osmosis on cells and tissues.</p>
+            <p>Investigate osmosis in potatoes.</p>
+            <p>Calculate percentage gain and loss of mass in osmosis.</p>
+        </div>
+
+            <div class="clearfix"></div>
+    </div>
+
+    <!--CB6 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/plants.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CB6 Plant Structures and their Functions</h2>
+
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CB6a Photosynthesis')">CB6a Photosynthesis</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB6b Factors that affect photosynthesis')">CB6b Factors that affect photosynthesis</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB6c Absorbing water and mineral ions')">CB6c Absorbing water and mineral ions</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB6d Transpiration and translocation')">CB6d Transpiration and translocation</button>
+        </div>
+        <div id="CB6a Photosynthesis" class="tabcontent">
+            <p>Explain why photosynthetic organisms are producers of biomass.</p>
+            <p>Recall some substances produced from glucose and their roles in the plant.</p>
+            <p>Summarise what happens in photosynthesis (including the use of a word equation).</p>
+            <p>Explain why photosynthesis is an endothermic reaction.</p>
+            <P>Explain how a leaf and its cells are adapted for photosynthesis.</p>
+        </div>
+        <div id="CB6b Factors that affect photosynthesis" class="tabcontent">
+            <p>Recall what is meant by a rate of reaction.</p>
+            <p>Describe the effects of temperature, light intensity and carbon dioxide concentration on the rate of photosynthesis.</p>
+            <p>Explain the effects of limiting factors of photosynthesis.</p>
+            <p>H Explain the effects of more than one factor on the rate of photosynthesis.</p>
+            <p>H Describe how light intensity and rate of photosynthesis are related.</p>
+            <p>H Explain why the rate of photosynthesis is inversely proportional to the distance of a light source.</p>
+        </div>
+        <div id="CB6c Absorbing water and mineral ions" class="tabcontent">
+            <p>Explain how root hair cells are adapted to taking in water and mineral ions.</p>
+            <p>Recall that substances can be transported by diffusion, osmosis and active transport.</p>
+            <p>Describe what is meant by a concentration gradient.</p>
+            <P>Explain why active transport is needed to transport some molecules.</p>
+            <p>Explain how molecules move by osmosis.</p>
+        </div>
+        <div id="CB6d Transpiration and translocation" class="tabcontent">
+            <p>Explain how xylem tissue is adapted to its functions.</p>
+            <p>Explain how phloem tissue is adapted to its function.</p>
+            <p>Describe how transpiration occurs.</p>
+            <p>Describe how translocation occurs.</p>
+            <p>Explain the effects of environmental factors on the rate of transpiration (light intensity, air movement, temperature, humidity).</p>
+            <p>Describe how to measure the rate of transpiration.</p>
+        </div>
+
+            <div class="clearfix"></div>
+    </div>
+    <!--CB7 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/glands2.webp" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CB7 Animal coordination, Control and Homeostasis</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CB7a Hormones')">CB7a Hormones</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB7b Hormonal control of metabolic rate')">CB7b Hormonal control of metabolic rate</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB7c The menstrual cycle')">CB7c The menstrual cycle</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB7d Hormones and the menstrual cycle')">CB7d Hormones and the menstrual cycle</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB7e Control of blood glucose')">CB7e Control of blood glucose</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB7f Type 2 diabetes')">CB7f Type 2 diabetes</button>
+        </div>
+        <div id="CB7a Hormones" class="tabcontent">
+            <p>State where hormones are produced (in endocrine glands).</p>
+            <p>Describe the general role of hormones in the body.</p>
+            <p>Describe how hormones are transported around the body.</p>
+            <p>Describe the production and release of some common hormones from their endocrine glands (pituitary gland, thyroid gland, pancreas, adrenal glands, ovaries and testes).</p>
+            <p>Identify the target organs of some common hormones.</p>
+            <p>Explain the importance of hormones.</p>
+        </div>
+        <div id="CB7b Hormonal control of metabolic rate" class="tabcontent">
+            <p>H Describe the effects of adrenalin on the body.</p>
+            <p>H Explain how adrenalin prepares the body for fight or flight.</p>
+            <p>H Define metabolic rate.</p>
+            <p>H Describe the effect of thyroxine on metabolic rate.</p>
+            <p>H Describe how a negative feedback mechanism works.</p>
+            <p>H Explain how negative feedback controls the production of thyroxine</p>
+            <p>H Explain why negative feedback mechanisms are important in living organisms.</p>
+        </div>
+        <div id="CB7c The menstrual cycle" class="tabcontent">
+            <p>Describe what happens during the menstrual cycle.</p>
+            <p>Describe the function of oestrogen in the menstrual cycle.</p>
+            <p>Describe the function of progesterone in the menstrual cycle.</p>
+            <p>Explain how barrier methods can be used as contraception.</p>
+            <p>Explain how hormones can be used as contraception.</p>
+            <p>Compare, contrast and evaluate hormonal and barrier methods of contraception.</p>
+        </div>
+        <div id="CB7d Hormones and the menstrual cycle" class="tabcontent">
+            <p>H Describe how changes in hormones affect the uterus wall, ovulation and menstruation.</p>
+            <p>H Explain how oestrogen, progesterone, FSH and LH interact in the menstrual cycle.</p>
+            <p>H Describe examples of Assisted Reproductive Technology (ART).</p>
+            <p>H Explain how clomifene is used to stimulate ovulation.</p>
+            <p>H Explain how hormones are used in IVF treatment.</p>
+        </div>
+        <div id="CB7e Control of blood glucose" class="tabcontent">
+            <p>Define homeostasis.</p>
+            <p>Explain why a constant internal environment is important.</p>
+            <p>Explain the role of insulin in regulating blood glucose concentration.</p>
+            <p>H Explain the role of glucagon in regulating blood glucose concentration.</p>
+            <p>Explain how type 1 diabetes is caused.</p>
+            <p>Explain how type 1 diabetes can be controlled.</p>
+        </div>
+        <div id="CB7f Type 2 diabetes" class="tabcontent">
+            <p>Explain how type 2 diabetes is caused.</p>
+            <p>Explain how type 2 diabetes can be controlled.</p>
+            <p>Describe the correlation between body mass and type 2 diabetes.</p>
+            <p>Explain how BMI and waist : hip ratio are related to body mass.</p>
+            <p>Evaluate the correlation between body mass and type 2 diabetes.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+        <!--CB8 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/heart.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CB8 Exchange and Transport in Animals</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CB8a Efficient transport and exchange')">CB8a Efficient transport and exchange</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB8b The circulatory system')">CB8b The circulatory system</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB8c The heart')">CB8c The heart</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB8d Cellular respiration')">CB8d Cellular respiration</button>
+        </div>
+        <div id="CB8a Efficient transport and exchange" class="tabcontent">
+            <p>Recall the names of substances that need to be transported into and out of the body.</p>
+            <p>Describe the functions of the substances that are transported into the body.</p>
+            <p>Describe the adaptations of the lungs for gas exchange.</p>
+            <p>Calculate surface area : volume ratios.</p>
+            <p>Explain the importance of surface area : volume ratios in transport systems.</p>
+        </div>
+        <div id="CB8b The circulatory system" class="tabcontent">
+            <p>Recall the components and function of the circulatory system.</p>
+            <p>Recall the functions of the different types of blood vessels.</p>
+            <p>Describe the functions of the different types of blood cells (erythrocytes, phagocytes, lymphocytes).</p>
+            <p>Describe the functions of blood platelets and plasma.</p>
+            <p>Describe how the different blood vessels are adapted to their functions.</p>
+        </div>
+        <div id="CB8c The heart" class="tabcontent">
+            <p>Recall the parts of the heart.</p>
+            <p>Describe the flow of blood through the heart.</p>
+            <p>Explain how the heart is adapted for its function (valves, differing ventricle muscle thicknesses).</p>
+            <p>Recall and use the equation that relates cardiac output, stroke volume and heart rate.</p>
+        </div>
+        <div id="CB8d Cellular respiration" class="tabcontent">
+            <p>Explain why organisms need to respire.</p>
+            <p>Recall the word equation for aerobic respiration.</p>
+            <p>Recall the word equation for anaerobic respiration in humans.</p>
+            <p>Explain why respiration is an exothermic process.</p>
+            <p>Compare aerobic and anaerobic respiration.</p>
+        </div>
+            <div class="clearfix"></div>
+    </div>
+    <!--CB9 checklist-->
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/alps.jpg" style="width:100%; height:50vh; object-fit:cover;" alt="Ecosystems and Material Cycles">
+        <h2>CB9 Ecosystems and Material Cycles</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CB9a Ecosystems')">CB9a Ecosystems</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB9b Abiotic factors and communities')">CB9b Abiotic factors and communities</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB9c Biotic factors and communities')">CB9c Biotic factors and communities</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB9d Parasitism and mutualism')">CB9d Parasitism and mutualism</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB9e Biodiversity and humans')">CB9e Biodiversity and humans</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB9f Preserving biodiversity')">CB9f Preserving biodiversity</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB9g The water cycle')">CB9g The water cycle</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB9h The carbon cycle')">CB9h The carbon cycle</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CB9i The nitrogen cycle')">CB9i The nitrogen cycle</button>
+        </div>
+        <div id="CB9a Ecosystems" class="tabcontent">
+            <p>State what is meant by the ecological terms community, population and habitat.</p>
+            <p>Give examples of an ecosystem, a community, a population and a habitat.</p>
+            <p>Describe the organisation of the components of an ecosystem (including populations, communities, habitats and abiotic factors).</p>
+            <P>Describe how the interdependence of organisms in an ecosystem allows their survival.</p>
+            <P>Explain how to estimate population size, including the use of quadrats.</p>
+        </div>
+        <div id="CB9b Abiotic factors and communities" class="tabcontent">
+            <p>Give examples of abiotic factors.</p>
+            <p>Explain how communities are affected by abiotic factors (temperature, light, water, pollutants).</p>
+            <p>Explain how to investigate the effect of abiotic factors on the distribution of organisms using belt transects.</p>
+        </div>
+        <div id="CB9c Biotic factors and communities" class="tabcontent">
+            <p>Give examples of biotic factors.</p>
+            <p>Describe how competition can affect communities.</p>
+            <p>Describe how predation can affect communities.</p>
+            <p>Explain how predator prey cycles affect communities.</p>
+            <p>Explain how the structure of a community can affect biodiversity.</p>
+        </div>
+        <div id="CB9d Parasitism and mutualism" class="tabcontent">
+            <p>Define the term parasitism.</p>
+            <p>Define the term mutualism.</p>
+            <p>Describe how parasites are dependent on their hosts.</p>
+            <p>Describe how hosts are harmed by parasites.</p>
+            <p>Identify parasites and mutualists in examples.</p>
+            <P>Explain how mutualists benefit from their relationship.</p>
+        </div>
+        <div id="CB9e Biodiversity and humans" class="tabcontent">
+            <p>Define the term eutrophication.</p>
+            <p>Describe examples of the introduction of non-indigenous species.</p>
+            <p>Describe the advantages of fish farming.</p>
+            <p>Explain how fish farming can affect ecosystems and biodiversity.</p>
+            <p>Explain how the introduction of species can affect ecosystems and biodiversity.</p>
+            <p>Explain how eutrophication can affect ecosystems and biodiversity.</p>
+        </div>
+        <div id="CB9f Preserving biodiversity" class="tabcontent">
+            <p>Define the term conservation.</p>
+            <p>Explain what is meant by reforestation.</p>
+            <p>Give examples of animal conservation.</p>
+            <p>Explain how animal conservation can benefit biodiversity.</p>
+            <p>Explain how reforestation can benefit biodiversity.</p>
+        </div>
+        <div id="CB9g The water cycle" class="tabcontent">
+            <p>Give examples of materials that cycle through ecosystems.</p>
+            <p>Describe the processes by which water cycles through abiotic parts of an ecosystem.</p>
+            <p>Describe the processes by which water cycles through living organisms.</p>
+            <p>Describe how drinking water is produced where water is plentiful.</p>
+            <p>Explain how drinking water can be produced by desalination in areas of drought.</p>
+            <p>Explain why water is important to living organisms.</p>
+        </div>
+        <div id="CB9h The carbon cycle" class="tabcontent">
+            <p>Give examples of decomposers.</p>
+            <p>Define the term decomposer.</p>
+            <p>Describe the carbon cycle.</p>
+            <p>Identify the key processes in the carbon cycle.</p>
+            <p>Explain how carbon is cycled through the biotic and abiotic components of an ecosystem.</p>
+            <p>Explain the importance of the carbon cycle (in balancing photosynthesis and respiration, and removal of wastes by decomposition).</p>
+        </div>
+        <div id="CB9i The nitrogen cycle" class="tabcontent">
+            <p>Describe how plants use nitrates.</p>
+            <p>Describe the different roles of bacteria in the nitrogen cycle.</p>
+            <p>Explain how fertilisers increase the nitrate content of the soil.</p>
+            <p>Explain why bacteria are important for soil fertility.</p>
+            <p>Explain how crop rotation can increase the nitrogen content of the soil.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="images/bccells.webp" style="width:100%" onclick="currentSlide(1)" alt="Key Concepts in Biology 1">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/bcaminoacids2.webp" style="width:100%" onclick="currentSlide(2)" alt="Key concepts in Biology 2">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/plants.jpg" style="width:100%" onclick="currentSlide(3)" alt="Plant Structures and their Functions">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/glands2.webp" style="width:100%" onclick="currentSlide(4)" alt="Animal Coordination, Control and Homeostasis">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/heart.jpg" style="width:100%" onclick="currentSlide(5)" alt="Exchange and Transport in Animals">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/alps.jpg" style="width:100%" onclick="currentSlide(6)" alt="Ecosystems and Material Cycles">
+        </div>
+    </div>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>

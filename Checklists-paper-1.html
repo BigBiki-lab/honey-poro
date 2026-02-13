@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="stylechecklists-paper-1.css">-->
+<style>
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+    img{
+       width: 100%;
+       height: 25vh;
+       object-fit: cover;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Seven columns side by side */
+    .column {
+      float: left;
+      width: 16.667%;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 1px solid #ccc;
+          background-color: #e5e5e5;
+          width: 30%;
+          height: auto;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: inherit;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: #a69cac;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border-top: 1px solid #ccc;
+          width: 70%;
+          border-left: none;
+          height: 100%;
+          display: none;
+        }
+
+        /* Clear floats after the tab */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+</style>
+<body>
+
+<h2 style="text-align:center">Checklists paper 1</h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/Cheetah-Running-Fast.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP1 Motion</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP1a Vectors and scalars')">CP1a Vectors and scalars</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP1b Distance/time graphs')">CP1b Distance/time graphs</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP1c Acceleration')">CP1c Acceleration</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP1d Velocity/time graphs')">CP1d Velocity/time graphs</button>
+        </div>
+        <div id="CP1a Vectors and scalars" class="tabcontent">
+            <p>Describe the difference between weight and mass.</p>
+<!--            <p><input type="checkbox" name="option1">Describe the difference between weight and mass.</p>-->
+            <p>Explain the difference between a vector and a scalar quantity.</p>
+            <p>Describe the difference between displacement and distance.</p>
+            <p>Describe the difference between velocity and speed.</p>
+            <p>Define the terms: acceleration, force, momentum, energy.</p>
+<!--            <p><input type="checkbox" name="option1">Explain the difference between a vector and a scalar quantity.</p>-->
+<!--            <p><input type="checkbox" name="option1">Describe the difference between displacement and distance.</p>-->
+<!--            <p><input type="checkbox" name="option1">Describe the difference between velocity and speed.</p>-->
+<!--            <p><input type="checkbox" name="option1">Define the terms: acceleration, force, momentum, energy.</p>-->
+        </div>
+
+        <div id="CP1b Distance/time graphs" class="tabcontent">
+            <p>Recall and use equations relating distance, speed and time.</p>
+            <p>Describe how speed can be measured in a school laboratory.</p>
+            <p>Recall typical speeds for walking, running, cycling and travelling by car.</p>
+            <p>Interpret distance/time graphs (including recognising what the steepness of the line tells you).</p>
+            <p>Represent journeys on distance/time graphs.</p>
+            <p>Determine speed from the gradient of a distance/time graph.</p>
+        </div>
+
+        <div id="CP1c Acceleration" class="tabcontent">
+            <p>Recall the formula relating acceleration, velocity and time.</p>
+            <p>Use the formula relating acceleration, velocity and time.</p>
+            <p>Recall the equation relating acceleration, velocity and distance.</p>
+            <p>Use the equation relating acceleration, velocity and distance.</p>
+            <p>Recall the acceleration in free fall.</p>
+            <p>Estimate the magnitudes of some everyday accelerations.</p>
+        </div>
+
+        <div id="CP1d Velocity/time graphs" class="tabcontent">
+            <p>Represent journeys on velocity/time graphs.</p>
+            <p>Interpret velocity/time graphs qualitatively.</p>
+            <p>Calculate uniform accelerations from the gradients of velocity/time graphs.</p>
+            <p>Determine the distance travelled from the area under a velocity/time graph.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/stock-photo-the-man-in-black-is-clicking-press-touch-to-activate-newton-s-second-law-of-motion-f-equal-to-ma-2155412681.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP2 Motion and Forces</h2>
+        <!--        <p>Move the mouse over a button inside the tabbed menu:</p>-->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP2a Resultant force')">CP2a Resultant force</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP2b Newton First Law')">CP2b Newton's First Law</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP2c Mass and weight')">CP2c Mass and weight</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP2d Newton Second Law')">CP2d Newton's Second Law</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP2e Newton Third Law')">CP2e Newton's Third Law</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP2f Momentum')">CP2f Momentum</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP2g Stopping distances')">CP2g Stopping distances</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP2H Crash hazards')">CP2H Crash hazards</button>
+        </div>
+        <div id="CP2a Resultant force" class="tabcontent">
+            <p>Explain the difference between scalar and vector quantities.</p>
+            <p>Use arrows to represent the direction and magnitude of forces.</p>
+            <p>Define a resultant force.</p>
+            <p>Calculate resultant forces.</p>
+            <p>Explain whether forces on an object are balanced or unbalanced.</p>
+        </div>
+
+        <div id="CP2b Newton First Law" class="tabcontent">
+            <p>Describe the effect of balanced forces on moving and stationary objects.</p>
+            <p>Describe the effect of a non-zero resultant force on moving and stationary objects.</p>
+            <p>H Describe circular motion at constant speed as a changing velocity and hence as an acceleration.</p>
+            <p>H Describe the force needed to keep an object moving in a circular path.</p>
+            <p>H Give some examples of objects moving in circular paths and the type of centripetal force involved.</p>
+        </div>
+
+        <div id="CP2c Mass and weight" class="tabcontent">
+            <p>Describe the difference between mass and weight.</p>
+            <p>List the factors that determine the weight of an object.</p>
+            <p>Recall the equation for calculating weight.</p>
+            <p>Use the equation relating weight, mass and gravitational field strength.</p>
+            <p>Describe how weight is measured.</p>
+            <p>Describe how the weight of an object is affected by gravitational field strength.</p>
+        </div>
+
+        <div id="CP2d Newton Second Law" class="tabcontent">
+            <p>Describe what an acceleration is.</p>
+            <p>List the factors that affect the acceleration of an object.</p>
+            <p>Recall the equation that relates the factors affecting acceleration.</p>
+            <p>Use the equation relating force, mass and acceleration.</p>
+            <p>Change the subject of the equation relating force, mass and acceleration.</p>
+            <p>H Explain what inertial mass means.</p>
+        </div>
+
+        <div id="CP2e Newton Third Law" class="tabcontent">
+            <p>Describe what Newton's Third Law says.</p>
+            <p>Recall the meaning of equilibrium situation.</p>
+            <p>Identify action–reaction pairs in familiar situations.</p>
+            <p>Distinguish between action reaction pairs and balanced forces.</p>
+            <p>H Describe how objects affect each other when they collide.</p>
+        </div>
+
+        <div id="CP2f Momentum" class="tabcontent">
+            <p>Describe the factors that affect the momentum of an object.</p>
+            <p>Calculate the momentum of moving objects.</p>
+            <p>Describe examples of momentum in collisions.</p>
+            <p>Use the idea of conservation of momentum to calculate velocities of objects after collisions.</p>
+            <p>Calculate the force needed to produce a change in momentum in a given time.</p>
+        </div>
+
+        <div id="CP2g Stopping distances" class="tabcontent">
+            <p>Describe how human reaction times are measured.</p>
+            <p>Recall typical human reaction times.</p>
+            <p>Describe the link between stopping distance, thinking distance and braking distance.</p>
+            <p>Recall the factors that affect stopping distances.</p>
+            <p>Describe how different factors affect stopping distances.</p>
+            <p>Describe the factors that affect a driver s reaction time, including drugs and distractions.</p>
+        </div>
+
+        <div id="CP2H Crash hazards" class="tabcontent">
+            <p>Calculate the force needed to produce a change in momentum in a given time.</p>
+            <p>Explain the meaning of a large deceleration.</p>
+            <p>Describe the dangers caused by large decelerations.</p>
+            <p>Explain why large decelerations cause dangers.</p>
+            <p>H Recall some typical forces involved in road collisions.</p>
+            <p>H Use knowledge of changes in momentum to estimate the forces involved in road collisions.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/TNBLOG_7WaysBodyEnergy_850x500_V1_R1.webp" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP3 Conservation of Energy</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP3a Energy stores and transfers')">CP3a Energy stores and transfers</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP3b Energy efficiency')">CP3b Energy efficiency</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP3c Keeping warm')">CP3c Keeping warm</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP3d Stored energies')">CP3d Stored energies</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP3e Non-renewable resources')">CP3e Non-renewable resources</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP3f Renewable resources')">CP3f Renewable resources</button>
+        </div>
+        <div id="CP3a Energy stores and transfers" class="tabcontent">
+            <p>Explain, using examples, that energy is conserved.</p>
+            <p>Give examples of energy being moved between different stores.</p>
+            <p>Interpret diagrams that represent energy transfers.</p>
+            <p>Represent energy transfers using diagrams.</p>
+            <p>Describe what happens to wasted energy in energy transfers.</p>
+        </div>
+        <div id="CP3b Energy efficiency" class="tabcontent">
+            <p>Explain some ways in which energy is transferred wastefully by mechanical processes.</p>
+            <p>Explain some ways of reducing unwanted energy transfers in mechanical processes.</p>
+            <p>Define what efficiency means.</p>
+            <p>H Explain how efficiency can be increased.</p>
+            <p>Recall and use the formula for calculating energy efficiency.</p>
+        </div>
+        <div id="CP3c Keeping warm" class="tabcontent">
+            <p>Describe the ways in which energy can be transferred by heating.</p>
+            <p>Describe ways of reducing unwanted energy transfers using thermal insulation.</p>
+            <p>Explain how different ways of reducing energy transfer by heating work.</p>
+            <p>Define the meaning of thermal conductivity.</p>
+            <p>Describe the effects of the thickness and thermal conductivity of the walls of a building on its rate of cooling.</p>
+        </div>
+        <div id="CP3d Stored energies" class="tabcontent">
+            <p>Describe how different factors affect the gravitational potential energy stored in an object.</p>
+            <p>Recall and use the equation for gravitational potential energy.</p>
+            <p>Describe how different factors affect the kinetic energy stored in an object.</p>
+            <p>Recall and use the equation for kinetic energy.</p>
+        </div>
+        <div id="CP3e Non-renewable resources" class="tabcontent">
+            <p>List the non-renewable energy resources in use today.</p>
+            <p>Describe the advantages and disadvantages of non-renewable energy resources.</p>
+            <p>Compare the advantages and disadvantages of non-renewable energy resources.</p>
+            <p>Explain how the use of non-renewable energy resources is changing.</p>
+        </div>
+        <div id="CP3f Renewable resources" class="tabcontent">
+            <p>List the renewable energy resources in use today.</p>
+            <p>Describe the source of energy for different renewable resources.</p>
+            <p>Describe the ways in which the different energy resources are used.</p>
+            <p>Explain why we cannot use only renewable energy resources.</p>
+            <p>Explain how the use of renewable energy resources is changing.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/ocean-waves-water-high-tides-5k-1920x1080-1341.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP4 Waves</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP4a Describing waves')">CP4a Describing waves</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP4b Wave speeds')">CP4b Wave speeds</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP4c Refraction')">CP4c Refraction</button>
+        </div>
+        <div id="CP4a Describing waves" class="tabcontent">
+            <p>Recall that waves transfer energy and information but do not transfer matter.</p>
+            <p>Describe waves using the terms frequency, wavelength, amplitude, period and velocity.</p>
+            <p>Describe the differences between longitudinal and transverse waves.</p>
+            <p>Give examples of transverse and longitudinal waves.</p>
+        </div>
+
+        <div id="CP4b Wave speeds" class="tabcontent">
+            <p>Recall the equation relating wave speed, frequency and wavelength.</p>
+            <p>Use the equation relating wave speed, frequency and wavelength.</p>
+            <p>Recall the equation relating wave speed, distance and time.</p>
+            <p>Use the equation relating wave speed, distance and time.</p>
+            <p>Describe how to measure the velocity of sound in air.</p>
+            <p>Describe how to measure the velocity of waves on the surface of water.</p>
+        </div>
+
+        <div id="CP4c Refraction" class="tabcontent">
+            <p>Describe what refraction is.</p>
+            <p>Describe how the direction of a wave changes when it goes from one material to another.</p>
+            <p>Explain some effects of the refraction of light (explanations in terms of changing speeds are
+                not expected).
+            </p>
+            <p>H Explain how a change in wave speed can cause a change in direction.</p>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/GammaScientific-107707-Applications-Electromagnetic-Waves-Blogbanner1.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP5 Light and the Electromagnetic Spectrum</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP5a Electromagnetic waves')">CP5a Electromagnetic waves</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP5b The electromagnetic spectrum')">CP5b The electromagnetic spectrum</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP5c Using the long wavelengths')">CP5c Using the long wavelengths</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP5d Using the short wavelengths')">CP5d Using the short wavelengths</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP5e EM radiation dangers')">CP5e EM radiation dangers</button>
+        </div>
+        <div id="CP5a Electromagnetic waves" class="tabcontent">
+            <p>Recall examples of electromagnetic waves.</p>
+            <p>Describe the common features of electromagnetic waves.</p>
+            <p>Describe the transfer of energy by electromagnetic waves.</p>
+            <p>Describe the range of electromagnetic waves that our eyes can detect.</p>
+            <p>H Describe an effect caused by the different velocities of electromagnetic waves in different substances.</p>
+        </div>
+        <div id="CP5b The electromagnetic spectrum" class="tabcontent">
+            <p>Recall the groups of waves in the electromagnetic spectrum in order.</p>
+            <p>Recall the colours of the visible spectrum in order.</p>
+            <p>Describe how the waves in the electromagnetic spectrum are grouped.</p>
+            <p>H Describe some differences in the ways that different parts of the electromagnetic spectrum are absorbed and transmitted.</p>
+            <p>H Describe some differences in the ways that different parts of the electromagnetic spectrum are refracted and reflected.</p>
+        </div>
+        <div id="CP5c Using the long wavelengths" class="tabcontent">
+            <p>H Describe how long wavelength electromagnetic waves are affected by different substances. </p>
+            <p>H Explain the effects caused by long wavelength electromagnetic waves travelling at different velocities in different substances.</p>
+            <p>Describe some uses of radio waves.</p>
+            <p>Describe some uses of microwaves.</p>
+            <p>Describe some uses of infrared.</p>
+            <p>Describe some uses of visible light.</p>
+            <p>H Describe how radio waves are produced and detected by electrical circuits.</p>
+        </div>
+        <div id="CP5d Using the short wavelengths" class="tabcontent">
+            <p>H Describe how short wavelength electromagnetic waves are affected by different substances.</p>
+            <p>H Explain the effects caused by short wavelength electromagnetic waves travelling at different velocities in different substances.</p>
+            <p>Describe some uses of ultraviolet radiation.</p>
+            <p>Describe some uses of X-rays.</p>
+            <p>Describe some uses of gamma rays.</p>
+        </div>
+        <div id="CP5e EM radiation dangers" class="tabcontent">
+            <p>Describe how the potential danger of electromagnetic radiation depends on its frequency.</p>
+            <p>Describe the harmful effects of microwave and infrared radiation.</p>
+            <p>Describe the harmful effects of ultraviolet radiation, X-rays and gamma rays.</p>
+            <p>Recall the nature of radiation produced by changes in atoms and their nuclei.</p>
+            <p>Recall that absorption of radiation can cause changes in atoms and their nuclei.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/shutterstock-266189789.jpg" style="width:100%; height:50vh; object-fit:cover;">
+        <h2>CP6 Radioactivity</h2>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'CP6a Atomic models')">CP6a Atomic models</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP6b Inside atoms')">CP6b Inside atoms</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP6c Electrons and orbits')">CP6c Electrons and orbits</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP6d Background radiation')">CP6d Background radiation</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP6e Types of radiation')">CP6e Types of radiation</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP6f Radioactive decay')">CP6f Radioactive decay</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP6g Half life')">CP6g Half-life</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CP6h Dangers of radioactivity')">CP6i Dangers of radioactivity</button>
+        </div>
+        <div id="CP6a Atomic models" class="tabcontent">
+            <p>Describe the structure of an atom (in terms of nucleus and electrons).</p>
+            <p>State where most of the mass of an atom is found.</p>
+            <p>State the sizes of atoms and small molecules.</p>
+            <p>Describe an early model of the atom.</p>
+            <p>Describe how and why our model of the atom has changed over time, including the plum pudding model and the Rutherford alpha particle scattering.</p>
+        </div>
+        <div id="CP6b Inside atoms" class="tabcontent">
+            <p>State what is meant by an isotope.</p>
+            <p>Represent isotopes using symbols.</p>
+            <p>Explain how atoms of different elements are different (in terms of numbers of electrons and protons).</p>
+            <p>Recall the charges and relative masses of the three subatomic particles.</p>
+            <p>Explain why all atoms have no overall charge.</p>
+        </div>
+        <div id="CP6c Electrons and orbits" class="tabcontent">
+            <p>Describe where electrons are found inside atoms (in terms of shells).</p>
+            <p>Describe when electrons can change orbit.</p>
+            <p>Recall what an ion is.</p>
+            <p>Describe how ionisation occurs.</p>
+            <p>Describe some of the evidence for the Bohr model of the atom.</p>
+        </div>
+        <div id="CP6d Background radiation" class="tabcontent">
+            <p>Explain what background radiation is.</p>
+            <p>Describe how radiation measurements need to be corrected for background radiation.</p>
+            <p>List some sources of background radiation.</p>
+            <p>Describe how photographic film can be used to detect radioactivity.</p>
+            <p>Describe how a Geiger-Muller tube works.</p>
+            <p>Describe how the amount of radioactivity can be measured (in terms of the darkness of photographic film or by attaching a counter to a GM tube).</p>
+        </div>
+        <div id="CP6e Types of radiation" class="tabcontent">
+            <p>List five types of radiation that are emitted in random processes from unstable nuclei.</p>
+            <p>State that the five types of radiation are ionising radiations.</p>
+            <p>Describe what alpha and beta particles are.</p>
+            <p>Describe the nature of gamma radiation.</p>
+            <p>Compare the penetrating abilities of alpha, beta and gamma radiation.</p>
+            <p>Compare the ionisation abilities of alpha, beta and gamma radiation.</p>
+        </div>
+        <div id="CP6f Radioactive decay" class="tabcontent">
+            <p>Describe the process of beta minus decay.</p>
+            <p>Describe the process of beta plus decay.</p>
+            <p>Explain how the proton and mass numbers are affected by different kinds of radioactive decay.</p>
+            <p>Describe what happens during nuclear rearrangement after radioactive decay.</p>
+            <p>Balance nuclear equations for mass and charge.</p>
+        </div>
+        <div id="CP6g Half life" class="tabcontent">
+            <p>Describe how the activity of a substance changes over time.</p>
+            <p>State how half-life can be used to describe the changing activity of a substance.</p>
+            <p>Recall the unit of activity.</p>
+            <p>Describe how half-life can be used to work out how much of a substance will decay in a certain time.</p>
+            <p>Carry out calculations involving half-life.</p>
+        </div>
+        <div id="CP6h Dangers of radioactivity" class="tabcontent">
+            <p>Describe the hazards of ionising radiation in terms of tissue damage and possible mutations.</p>
+            <p>Explain how the dangers of ionising radiation depend on the half-life.</p>
+            <p>Explain the precautions taken to reduce the risks from radiation and ensure the safety of patients exposed to radiation.</p>
+            <p>Explain the precautions taken to reduce the risks from radiation and protect people who work with radiation.</p>
+            <p>Describe the differences between contamination and irradiation effects.</p>
+            <p>Compare the hazards of contamination and irradiation.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="images/Cheetah-Running-Fast.jpg" style="width:100%" onclick="currentSlide(1)" alt="Motion">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/stock-photo-the-man-in-black-is-clicking-press-touch-to-activate-newton-s-second-law-of-motion-f-equal-to-ma-2155412681.jpg" style="width:100%" onclick="currentSlide(2)" alt="Forces and Motion">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/TNBLOG_7WaysBodyEnergy_850x500_V1_R1.webp" style="width:100%" onclick="currentSlide(3)" alt="Conservation of Energy">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/ocean-waves-water-high-tides-5k-1920x1080-1341.jpg" style="width:100%" onclick="currentSlide(4)" alt="Waves">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/GammaScientific-107707-Applications-Electromagnetic-Waves-Blogbanner1.jpg" style="width:100%" onclick="currentSlide(5)" alt="Light and the Electromagnetic Spectrum">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/shutterstock-266189789.jpg" style="width:100%" onclick="currentSlide(6)" alt="Radioactivity">
+        </div>
+    </div>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>
+
