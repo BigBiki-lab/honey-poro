@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Physics Paper 2 lessons</title>
+    <link rel="stylesheet" href="stylephysics2css.css">
+</head>
+<body>
+
+<div class="checklist">
+    <h2>Triple Physics - Paper 2 lessons</h2>
+
+    <h3>SP8/SP9 FORCES AND THEIR EFFECTS</h3>
+
+    <label>
+        <input type="checkbox" id="item1" />
+        <i></i>
+        <span>SP8a Work and power</span>
+    </label>
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item2" />-->
+<!--        <i></i>-->
+<!--        <span>SP1b Distance/time graphs</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item3" />-->
+<!--        <i></i>-->
+<!--        <span>SP1c Acceleration</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item4" />-->
+<!--        <i></i>-->
+<!--        <span>SP1d Velocity/time graphs</span>-->
+<!--    </label>-->
+
+
+<!--    <h3>SP2 MOTION AND FORCES</h3>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item5" />-->
+<!--        <i></i>-->
+<!--        <span>SP2a Resultant forces</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item6" />-->
+<!--        <i></i>-->
+<!--        <span>SP2b Newton's First law</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item7" />-->
+<!--        <i></i>-->
+<!--        <span>SP2c Mass and weight</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item8" />-->
+<!--        <i></i>-->
+<!--        <span>SP2d Newton's Second law</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item9" />-->
+<!--        <i></i>-->
+<!--        <span>SP2d Core practical - Investigating acceleration</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item10" />-->
+<!--        <i></i>-->
+<!--        <span>SP2e Newton's Third law</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item11" />-->
+<!--        <i></i>-->
+<!--        <span>SP2f Momentum</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item12" />-->
+<!--        <i></i>-->
+<!--        <span>SP2g Stopping distances</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item13" />-->
+<!--        <i></i>-->
+<!--        <span>SP2h Braking distance and energy</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item14" />-->
+<!--        <i></i>-->
+<!--        <span>SP2i Crash hazards</span>-->
+<!--    </label>-->
+
+
+<!--    <h3>SP3 CONSERVATION OF ENERGY</h3>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item15" />-->
+<!--        <i></i>-->
+<!--        <span>SP3a Energy stores and transfers</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item16" />-->
+<!--        <i></i>-->
+<!--        <span>SP3b Energy efficiency</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item17" />-->
+<!--        <i></i>-->
+<!--        <span>SP3c Keeping warm</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item18" />-->
+<!--        <i></i>-->
+<!--        <span>SP3d Stored energies</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item19" />-->
+<!--        <i></i>-->
+<!--        <span>SP3e Non-renewable resources</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item20" />-->
+<!--        <i></i>-->
+<!--        <span>SP3f Renewable resources</span>-->
+<!--    </label>-->
+
+
+<!--    <h3>SP4 WAVES</h3>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item21" />-->
+<!--        <i></i>-->
+<!--        <span>SP4a Describing waves</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item22" />-->
+<!--        <i></i>-->
+<!--        <span>SP4b Wave speeds</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item23" />-->
+<!--        <i></i>-->
+<!--        <span>SP4b Core practical - Investigating waves</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item24" />-->
+<!--        <i></i>-->
+<!--        <span>SP4c Refraction</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item25" />-->
+<!--        <i></i>-->
+<!--        <span>SP4d Waves crossing boundaries</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item26" />-->
+<!--        <i></i>-->
+<!--        <span>SP4e Ears and hearing</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item27" />-->
+<!--        <i></i>-->
+<!--        <span>SP4f Ultrasound</span>-->
+<!--    </label>-->
+
+<!--    <label>-->
+<!--        <input type="checkbox" id="item28" />-->
+<!--        <i></i>-->
+<!--        <span>SP4g Infrasound</span>-->
+<!--    </label>-->
+
+</div>
+
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    // Load saved states
+    checkboxes.forEach(checkbox => {
+        const savedState = localStorage.getItem(checkbox.id);
+
+        if (savedState === 'true') {
+            checkbox.checked = true;
+        }
+
+        // Save state when changed
+        checkbox.addEventListener('change', () => {
+            localStorage.setItem(checkbox.id, checkbox.checked);
+        });
+    });
+</script>
+
+</body>
+</html>
