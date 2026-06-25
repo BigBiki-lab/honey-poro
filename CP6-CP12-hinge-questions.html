@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MP7FMLLN42"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MP7FMLLN42');
+    </script>
+    <meta charset="UTF-8">
+    <title>CP6-CP12 Hinge questions</title>
+    <link rel="stylesheet" href="stylephysics1css.css">
+</head>
+<body>
+
+<div class="checklist">
+    <h2>CP6-CP12 Hinge questions</h2>
+
+    <h3>CP6 Radioactivity</h3>
+
+    <label>
+        <input type="checkbox" id="item93" />
+        <i></i>
+        <span>CP6a Atomic models</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item94" />
+        <i></i>
+        <span>CP6b Inside atoms</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item95" />
+        <i></i>
+        <span>CP6c Electrons and orbits</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item96" />
+        <i></i>
+        <span>CP6d Background radiation</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item97" />
+        <i></i>
+        <span>CP6e Types of radiation</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item98" />
+        <i></i>
+        <span>CP6f Radioactive decay</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item99" />
+        <i></i>
+        <span>CP6g Half-life</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item100" />
+        <i></i>
+        <span>CP6h Dangers of radioactivity</span>
+    </label>
+
+
+    <h3>CP7 Energy - Forces doing work</h3>
+
+    <label>
+        <input type="checkbox" id="item101" />
+        <i></i>
+        <span>CP7a Work and power</span>
+    </label>
+
+
+    <h3>CP8 Forces and their effects</h3>
+
+    <label>
+        <input type="checkbox" id="item102" />
+        <i></i>
+        <span>CP8a Objects affecting each other</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item103" />
+        <i></i>
+        <span>CP8b Vector diagrams</span>
+    </label>
+
+
+    <h3>CP9 Electricity and circuits</h3>
+
+    <label>
+        <input type="checkbox" id="item104" />
+        <i></i>
+        <span>CP9a Electric circuits</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item105" />
+        <i></i>
+        <span>CP9b Current and potential difference</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item106" />
+        <i></i>
+        <span>CP9c Current, charge and energy</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item107" />
+        <i></i>
+        <span>CP9d Resistance</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item108" />
+        <i></i>
+        <span>CP9e More about resistance</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item110" />
+        <i></i>
+        <span>CP9f Transferring energy</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item111" />
+        <i></i>
+        <span>CP9g Power</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item112" />
+        <i></i>
+        <span>CP9h Transferring energy by electricity</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item113" />
+        <i></i>
+        <span>CP9i Electrical safety</span>
+    </label>
+
+
+    <h3>CP10 Magnetism and the motor effect</h3>
+
+    <label>
+        <input type="checkbox" id="item114" />
+        <i></i>
+        <span>CP10a Magnets and magnetic fields</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item115" />
+        <i></i>
+        <span>CP10b Electromagnetism</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item116" />
+        <i></i>
+        <span>CP10c Magnetic forces</span>
+    </label>
+
+
+    <h3>CP11 Electromagnetic induction</h3>
+
+    <label>
+        <input type="checkbox" id="item117" />
+        <i></i>
+        <span>CP11a Transformers</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item118" />
+        <i></i>
+        <span>CP11b Transformers and energy</span>
+    </label>
+
+
+    <h3>CP12 Particle model</h3>
+
+    <label>
+        <input type="checkbox" id="item119" />
+        <i></i>
+        <span>CP12a Particles and density</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item120" />
+        <i></i>
+        <span>CP12b Energy and changes of state</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item121" />
+        <i></i>
+        <span>CP12c Energy calculations</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="item122" />
+        <i></i>
+        <span>CP12d Gas temperature and pressure</span>
+    </label>
+</div>
+
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    // Load saved states
+    checkboxes.forEach(checkbox => {
+        const savedState = localStorage.getItem(checkbox.id);
+
+        if (savedState === 'true') {
+            checkbox.checked = true;
+        }
+
+        // Save state when changed
+        checkbox.addEventListener('change', () => {
+            localStorage.setItem(checkbox.id, checkbox.checked);
+        });
+    });
+</script>
+
+</body>
+</html>
