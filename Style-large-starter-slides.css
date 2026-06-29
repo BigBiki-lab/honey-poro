@@ -5,15 +5,39 @@
           box-sizing: border-box;
 }
 
+body{
+  background-color: #222D44;
+}
+
 h1{
   font-size: 3rem;
   font-family: 'Montserrat';
   font-weight: normal;
-  color: #2E1A47;
+  color: #FFFFFF;
   text-align: center;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
   text-decoration-line: underline;
+}
+
+h2{
+  font-size: 1.5rem;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #FFFFFF;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h3{
+  font-size: 1.3rem;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #D1E1F0;
+  text-align: left;
+  margin-left: 100px;
+  margin-right: 50px;
 }
 
 .wrapper{
