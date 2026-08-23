@@ -9,7 +9,9 @@ const images = [
       "images/background-images/cherry-blossom-1.png",
       "images/background-images/space-2.jpg",
       "images/background-images/flower-2.jpg",
-      "images/background-images/flower-1.jpg"
+      "images/background-images/flower-1.jpg",
+      "images/background-images/poppies.jpg",
+      "images/background-images/robin.jpg"
     ];
 
     // Get the day of the year
