@@ -11,7 +11,10 @@ const images = [
       "images/background-images/flower-2.jpg",
       "images/background-images/flower-1.jpg",
       "images/background-images/poppies.jpg",
-      "images/background-images/robin.jpg"
+      "images/background-images/robin.jpg",
+      "images/andreas-kretschmer-zUytXs3fusw-unsplash.jpg",
+      "images/katarzyna-pe-fAYq5NwetGM-unsplash.jpg",
+      "images/seppo-helle-UwEg9-Eweds-unsplash.jpg"
     ];
 
     // Get the day of the year
