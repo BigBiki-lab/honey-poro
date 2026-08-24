@@ -12,9 +12,9 @@ const images = [
       "images/background-images/flower-1.jpg",
       "images/background-images/poppies.jpg",
       "images/background-images/robin.jpg",
-      "images/andreas-kretschmer-zUytXs3fusw-unsplash.jpg",
-      "images/katarzyna-pe-fAYq5NwetGM-unsplash.jpg",
-      "images/seppo-helle-UwEg9-Eweds-unsplash.jpg"
+      "images/background-images/andreas-kretschmer-zUytXs3fusw-unsplash.jpg",
+      "images/background-images/katarzyna-pe-fAYq5NwetGM-unsplash.jpg",
+      "images/background-images/seppo-helle-UwEg9-Eweds-unsplash.jpg"
     ];
 
     // Get the day of the year
