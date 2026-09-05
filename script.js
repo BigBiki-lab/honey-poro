@@ -36,7 +36,26 @@ const images = [
       "images/background-images/wp14064237-nature-scenery-4k-wallpapers.jpg",
       "images/background-images/wp2476657-wind-wallpapers.jpg",
       "images/background-images/wp14064237-nature-scenery-4k-wallpapers.jpg",
-      "images/background-images/wp3592349-rice-field-wallpapers.jpg"
+      "images/background-images/wp3592349-rice-field-wallpapers.jpg",
+      "images/background-images/wp7264681-tahiti-french-polynesia-wallpapers.jpg",
+      "images/background-images/wp7264566-tahiti-french-polynesia-wallpapers.jpg",
+      "images/background-images/wp4191532-polynesia-wallpapers.jpg",
+      "images/background-images/wp1823710-croatia-wallpapers.jpg",
+      "images/background-images/wp1823692-croatia-wallpapers.jpg",
+      "images/background-images/wp14819796-croatia-wallpapers.jpg",
+      "images/background-images/wp3951912-pier-wallpapers.jpg",
+      "images/background-images/wp4686472-pier-wallpapers.jpg",
+      "images/background-images/wp6696105-pacific-ocean-wallpapers.jpg",
+      "images/background-images/wp14760210-atlantic-ocean-wallpapers.jpg",
+      "images/background-images/wp14760204-atlantic-ocean-wallpapers.jpg",
+      "images/background-images/wp14760167-atlantic-ocean-wallpapers.jpg",
+      "images/background-images/wp14760155-atlantic-ocean-wallpapers.jpg",
+      "images/background-images/wp14760153-atlantic-ocean-wallpapers.jpg",
+      "images/background-images/wp13055400-arctic-ocean-wallpapers.jpg",
+      "images/background-images/wp13055391-arctic-ocean-wallpapers.jpg",
+      "images/background-images/wp4329541-arctic-wallpapers.jpg",
+      "images/background-images/wp11889529-arctic-beauty-wallpapers.jpg",
+      "images/background-images/wp13055330-arctic-ocean-wallpapers.jpg"
     ];
 
     // Get the day of the year
